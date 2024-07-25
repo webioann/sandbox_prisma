@@ -6,23 +6,38 @@ import { BsClock } from "react-icons/bs";
 import type { TodoType } from "@/types/todo.types";
 import '../Styles/todo.scss'
 
-type TodoProps = Omit<TodoType, 'id'>
+type TodoPropsData = {
+    data: TodoType
+}
 
-const Todo: React.FC<TodoType> = ({title, isCompleted, createdAt, id}) => {
+const Todo: React.FC<TodoPropsData> = ({data}) => {
+
+    async function deleteTodo( id: string ) {
+        const res = await fetch('http://localhost:3000/api/delete', {
+            next: { revalidate: 10 },
+            method: 'DELETE',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ id: id })
+        })
+        const data = await res.json();
+        return data
+    }
 
     return (
         <div className='todo'>
             <i className='icon'>
-                { isCompleted 
+                { data.isCompleted 
                     ? <MdOutlineCheckBox size={18} color='red'/> 
                     : <MdOutlineCheckBoxOutlineBlank size={18} color='red'/>
                 }
             </i>
             <p className='title'>
-                { title }
+                { data.title }
             </p>
             <i className='icon'>
-                <MdOutlineDelete size={20} color='red'/>
+                <MdOutlineDelete size={20} color='red' onClick={() => deleteTodo(data.id)}/>
             </i>
         </div>
     )
