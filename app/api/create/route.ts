@@ -12,6 +12,7 @@ export async function POST(request: NextResponse) {
                 isCompleted: false
             }
         })
+        return NextResponse.json({ massage: 'New ToDo created', status: 201 })
     }
     catch(error) {
         return NextResponse.json({ error: 'Error in time creating new Todo', status: 500 })

@@ -1,6 +1,6 @@
 'use client'
 import React, { FormEventHandler } from 'react'
-import '../Styles/add-todo.css'
+import '../Styles/add-todo.scss'
 
 function AddTodoInput() {
 
@@ -20,8 +20,9 @@ function AddTodoInput() {
             }
             if(!response.ok) { throw new Error('Response not OK') }
         } 
-        catch (error) { throw new Error('ERROR in Sign In form') }
+        catch (error) { throw new Error('ERROR in AddTodoInput form') }
     }
+    
     return (
         <form onSubmit={handleSubmit}>
             <input 

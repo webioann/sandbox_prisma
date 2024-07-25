@@ -1,0 +1,24 @@
+.todo{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 320px;
+    .icon{
+        background-color: #ccc;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        /* padding: 5px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title{
+        flex: 1;
+    }
+    
+}
