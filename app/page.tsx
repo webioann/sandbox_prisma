@@ -1,20 +1,18 @@
-const prisma = require('../prisma/prisma.client')
-
+import Todo from "./components/Todo"
+import AddTodoInput from "./components/AddTodoInput";
+import './Styles/todo.css'
 export default function Home() {
 
-  const todo = async() => {
-    await prisma.todo.create({
-      data: {
-        title: 'hello world',
-        isComplited: false
-      }
-    })
-  }
-
   return (
-    <main>
-      <h1>HOME PAGE</h1>
-      <button onClick={todo}>CLICK ME</button>
+    <main className="main">
+      <section className="container">
+        <h1>HOME PAGE</h1>
+        <AddTodoInput/>
+        <ul className="todo-list">
+          <Todo/>
+
+        </ul>
+      </section>
     </main>
   );
 }
