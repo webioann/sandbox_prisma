@@ -1,30 +1,13 @@
 'use client'
 import React, { FormEventHandler } from 'react'
+import { createNewTodo } from '../api/create/action'
 import '../Styles/add-todo.scss'
 
 function AddTodoInput() {
 
-    const handleSubmit: FormEventHandler<HTMLFormElement> = async(event) => {
-        event.preventDefault()
-        const formData = new FormData(event.currentTarget)
-        try {
-            const response = await fetch('http://localhost:3000/api/create', {
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify({
-                    title: formData.get('todo'),
-                })
-            })
-            if(response.ok) {
-                console.log("ToDo was created ====>", response)
-            }
-            if(!response.ok) { throw new Error('Response not OK') }
-        } 
-        catch (error) { throw new Error('ERROR in AddTodoInput form') }
-    }
     
     return (
-        <form onSubmit={handleSubmit}>
+        <form action={createNewTodo}>
             <input 
                 type='text'
                 name='todo'

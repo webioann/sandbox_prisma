@@ -1,9 +1,12 @@
 import { NextResponse } from "next/server";
 import prisma from "@/prisma/prisma";
+import { revalidatePath } from "next/cache";
+
 
 export async function GET() {
     try{
-        const data = await prisma.todo.findMany()        
+        const data = await prisma.todo.findMany()
+        revalidatePath("/")        
         return NextResponse.json({ data, status: 201 })
     }
     catch(error) {

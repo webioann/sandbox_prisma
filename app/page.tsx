@@ -11,9 +11,7 @@ export const revalidate = 60
 export default async function Home() {
 
   async function fetchTodo() {
-    const res = await fetch('http://localhost:3000/api/todos', {
-      cache: 'no-cache'
-    })
+    const res = await fetch('http://localhost:3000/api/todos')
     if (!res.ok) { throw new Error('Failed to fetch data') }
     const todos: Promise<IResponseData> = res.json()
     return todos

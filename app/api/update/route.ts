@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import prisma from "@/prisma/prisma"
+import { revalidatePath } from "next/cache";
 
 export async function PUT(request: NextResponse) {
     try{
@@ -10,6 +11,7 @@ export async function PUT(request: NextResponse) {
         await prisma.todo.update({
             where: { id: id }, data: { isCompleted: !status },
         })
+        revalidatePath('/')
         return NextResponse.json({ massage: 'ToDo updated', status: 201 })
     }
     catch(error) {
