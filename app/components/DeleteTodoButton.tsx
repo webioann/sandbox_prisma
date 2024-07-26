@@ -2,18 +2,19 @@
 import React from 'react'
 import { MdOutlineDelete } from "react-icons/md"
 import { deleteTodo } from '../api/delete/action'
+import '../Styles/delete-button.scss'
 
 type TodoId = { todoId: string }
 
-const DeleteButton: React.FC<TodoId> = ({todoId}) => {
+const DeleteTodoButton: React.FC<TodoId> = ({todoId}) => {
     return (
-        <form action={deleteTodo}>
+        <form action={deleteTodo} className='delete-button'>
             <input type='hidden' name='delete' value={todoId}/>
-            <button type='submit'>
+            <button type='submit' className='delete-icon'>
                 <MdOutlineDelete size={20} color='red'/>
             </button>
         </form>
     )
 }
 
-export default DeleteButton;
+export default DeleteTodoButton;

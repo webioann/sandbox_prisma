@@ -33,3 +33,27 @@ export async function DELETE(request: NextRequest,{ params }: { params: { id: st
     const data = await res.json();
     return NextResponse.json(data)
 }
+async function deleteTodo( id: string ) {
+    const res = await fetch('http://localhost:3000/api/delete', {
+        // next: { revalidate: 10 },
+        method: 'DELETE',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: id })
+    })
+    const data = await res.json();
+    return data
+}
+async function updateTodo( id: string ) {
+    const res = await fetch('http://localhost:3000/api/update', {
+        method: 'PUT',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: id })
+    })
+    const data = await res.json();
+    return data
+}
+

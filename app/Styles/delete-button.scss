@@ -1,0 +1,14 @@
+.delete-button{
+    background-color: #ccc;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .delete-icon{
+        border: 0;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+}
