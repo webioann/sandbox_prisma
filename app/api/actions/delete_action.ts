@@ -2,14 +2,11 @@
 import { revalidatePath } from "next/cache";
 import prisma  from "../../../prisma/prisma";
 
-export async function deleteTodo(formData: FormData) {
-    const todoId = formData.get("delete") as string
-        if(todoId) {
-            await prisma.todo.delete({
-                where: {
-                    id: todoId,
-                },
-                });
-                revalidatePath("/");
-        }
+export async function deleteTodo(todoId: string) {
+    await prisma.todo.delete({
+        where: {
+            id: todoId,
+        },
+        });
+        revalidatePath("/");
     }
