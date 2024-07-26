@@ -1,4 +1,5 @@
 import React, { FormEventHandler } from 'react'
+import { NextRequest, NextResponse } from 'next/server'
 
 const handleSubmit: FormEventHandler<HTMLFormElement> = async(event) => {
     event.preventDefault()
@@ -20,4 +21,15 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async(event) => {
         if(!response.ok) { throw new Error('Response not OK') }
     } 
     catch (error) { throw new Error('ERROR in AddTodoInput form') }
+}
+export async function DELETE(request: NextRequest,{ params }: { params: { id: string } }) {
+    const res = await fetch('http://localhost:3000/api/delete', {
+        next: { revalidate: 10 },
+        method: 'DELETE',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+    })
+    const data = await res.json();
+    return NextResponse.json(data)
 }

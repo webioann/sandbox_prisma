@@ -3,7 +3,8 @@ import React, { useEffect } from 'react'
 import { MdOutlineDelete, MdOutlineCheckBox, MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
 import { LiaEditSolid } from "react-icons/lia";
 import { BsClock } from "react-icons/bs";
-import type { TodoType } from "@/types/todo.types";
+import type { TodoType } from "@/types/todo.types"
+import DeleteButton from './DeleteButton';
 import '../Styles/todo.scss'
 
 type TodoPropsData = {
@@ -49,9 +50,11 @@ const Todo: React.FC<TodoPropsData> = ({data}) => {
                 { data.title }
                 <span className='time'>{ new Date(data.createdAt).getHours() + " : " + new Date(data.createdAt).getMinutes()}</span>
             </p>
-            <i className='icon'>
+            <DeleteButton todoId={data.id}/>
+            {/* <i className='icon'>
                 <MdOutlineDelete size={20} color='red' onClick={() => deleteTodo(data.id)}/>
-            </i>
+            </i> */}
+
         </div>
     )
 }

@@ -1,13 +1,15 @@
-import { NextRequest, NextResponse } from 'next/server'
+"use server";
+import { revalidatePath } from "next/cache";
+import prisma  from "../../../prisma/prisma";
 
-export async function DELETE(request: NextRequest,{ params }: { params: { id: string } }) {
-    const res = await fetch('http://localhost:3000/api/delete', {
-        next: { revalidate: 10 },
-        method: 'DELETE',
-        headers: {
-        'Content-Type': 'application/json',
-        },
-    })
-    const data = await res.json();
-    return NextResponse.json(data)
-}
+export async function deleteTodo(formData: FormData) {
+    const todoId = formData.get("delete") as string
+        if(todoId) {
+            await prisma.todo.delete({
+                where: {
+                    id: todoId,
+                },
+                });
+                revalidatePath("/");
+        }
+    }

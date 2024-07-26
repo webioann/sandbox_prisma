@@ -1,11 +1,10 @@
 'use client'
-import React, { FormEventHandler } from 'react'
+import React, { useState } from 'react'
 import { createNewTodo } from '../api/create/action'
 import '../Styles/add-todo.scss'
 
 function AddTodoInput() {
 
-    
     return (
         <form action={createNewTodo}>
             <input 
