@@ -1,5 +1,7 @@
 import React, { FormEventHandler } from 'react'
 import { NextRequest, NextResponse } from 'next/server'
+import prisma from "@/prisma/prisma"
+import { revalidatePath } from "next/cache";
 
 const handleSubmit: FormEventHandler<HTMLFormElement> = async(event) => {
     event.preventDefault()
@@ -57,3 +59,48 @@ async function updateTodo( id: string ) {
     return data
 }
 
+export async function PUT(request: NextResponse) {
+    try{
+        const { id } = await request.json() 
+        console.log('ID ---> ', id)
+        const raw = await prisma.todo.findUnique({where: { id: id }})
+        const status = raw?.isCompleted
+        await prisma.todo.update({
+            where: { id: id }, data: { isCompleted: !status },
+        })
+        revalidatePath('/')
+        return NextResponse.json({ massage: 'ToDo updated', status: 201 })
+    }
+    catch(error) {
+        return NextResponse.json({ error: 'Error in time todo updating', status: 500 })
+    }
+}
+export async function POST(request: NextResponse) {
+    try{
+        const { title } = await request.json()
+        await prisma.todo.create({
+            data: {
+                title: title,
+                isCompleted: false
+            }
+        })
+        revalidatePath("/")
+        return NextResponse.json({ massage: 'New ToDo created', status: 201 })
+    }
+    catch(error) {
+        return NextResponse.json({ error: 'Error in time creating new Todo', status: 500 })
+    }
+}
+export async function DELET(request: NextResponse) {
+    try{
+        const { id } = await request.json() 
+        console.log('ID ---> ', id)
+        await prisma.todo.delete({where: {
+            id: id
+        }})
+        return NextResponse.json({ massage: 'ToDo deleted', status: 201 })
+    }
+    catch(error) {
+        return NextResponse.json({ error: 'Error in time deleting new Todo', status: 500 })
+    }
+}

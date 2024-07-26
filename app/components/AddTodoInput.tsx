@@ -1,18 +1,24 @@
 'use client'
-import React, { useState } from 'react'
-import { createNewTodo } from '../api/create/action'
+import React, { useRef } from 'react'
+import { createNewTodo } from '../api/actions/create_action'
 import '../Styles/add-todo.scss'
 
 function AddTodoInput() {
+    const ref = useRef<HTMLFormElement>(null)
+
+    const resetInputField = () => {
+        setTimeout(() => { ref.current && ref.current.reset() }, 500)
+    }
 
     return (
-        <form action={createNewTodo}>
+        <form action={createNewTodo} ref={ref}>
             <input 
                 type='text'
                 name='todo'
                 placeholder='add new todo ...'
             />
-            <button type='submit'>add todo</button>
+            <button type='submit' onClick={resetInputField}>
+                    add todo</button>
         </form>
     )
 }

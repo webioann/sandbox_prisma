@@ -1,7 +1,7 @@
 'use client';
 import React from 'react'
 import { MdOutlineDelete } from "react-icons/md"
-import { deleteTodo } from '../api/delete/action'
+import { deleteTodo } from '../api/actions/delete_action'
 import '../Styles/delete-button.scss'
 
 type TodoId = { todoId: string }

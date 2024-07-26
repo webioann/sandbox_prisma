@@ -18,7 +18,6 @@ export default async function Home() {
   }
 
   const todos = await fetchTodo()
-  // console.log('DATA ===> ', todos.data)
 
   return (
     <main className="main">
