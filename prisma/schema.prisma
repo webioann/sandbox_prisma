@@ -1,12 +1,32 @@
 generator client {
   provider = "prisma-client-js"
 }
+// type IUserModelSchema {
+//     name  String 
+//     email String
+//     password  String 
+//     image    String?
+//     provider 'google' | 'credentials'
+//     accountCreated Int
+// }
 
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
-
+model user {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  username     String
+  email        String
+  password     String
+  image        String
+  provider     Provider
+  created      DateTime @default(now())
+}
+enum Provider {
+  google
+  credentials
+}
 model Todo {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String?
