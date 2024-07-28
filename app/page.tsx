@@ -2,6 +2,7 @@ import Todo from "../components/Todo"
 import AddTodoInput from "../components/AddTodoInput";
 import type { TodoType } from "@/types/todo.types";
 import './global.css'
+import Link from "next/link";
 
 interface IResponseData {
   data: TodoType[],
@@ -22,6 +23,7 @@ export default async function Home() {
   return (
     <main className="main">
       <section className="container">
+        <Link href='/register' className="link-btn">Signin</Link>
         <h1>HOME PAGE</h1>
         <AddTodoInput/>
         <ul className="todo-list">

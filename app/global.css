@@ -73,3 +73,8 @@ html, body{
     justify-content: center;
     padding-top: 50px;
 }
+.link-btn{
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
