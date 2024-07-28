@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 // import GoogleSigninButton from '../GoogleSigninButton/GoogleSigninButton';
 import { signIn } from "next-auth/react";
 import Link from 'next/link'
+import login from '@/actions/login_action';
 import './login-form.scss'
 
 function LoginForm() {
@@ -42,7 +43,7 @@ function LoginForm() {
     // }
 
     return (
-        <form className='form'>
+        <form className='form' action={login}>
             <div className='wrapper'>
                 <h1 className='form-title'>Login</h1>
                 <p className='form-subtitle'>use your password and email</p>

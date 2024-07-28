@@ -1,0 +1,31 @@
+.main{
+    min-width: 100%;
+    min-height: 100vh;
+    .container{
+        max-width: 1024px;
+        margin: 0 auto;
+        display: grid;
+        justify-content: center;
+        padding-top: 50px;
+        h1{
+            padding: 10px;
+            text-align: center;
+        }
+        .link-btn{
+            padding: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            margin: 20px;
+            font-weight: 600;
+            color: blue;
+        }
+        .todo-list{
+            display: grid;
+            justify-content: center;
+            padding-top: 50px;
+            gap: 1rem;
+        }
+    }
+}

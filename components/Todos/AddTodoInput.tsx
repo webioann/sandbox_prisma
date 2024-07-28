@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef } from 'react'
-import { createNewTodo } from '../actions/create_action'
-import './add-todo.scss'
+import { createNewTodo } from '../../actions/create_action'
+import './todo.scss'
 
 function AddTodoInput() {
     const ref = useRef<HTMLFormElement>(null)
