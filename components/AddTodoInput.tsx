@@ -1,6 +1,6 @@
 'use client'
 import React, { useRef } from 'react'
-import { createNewTodo } from '../app/api/actions/create_action'
+import { createNewTodo } from '../actions/create_action'
 import './add-todo.scss'
 
 function AddTodoInput() {

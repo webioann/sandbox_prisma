@@ -1,10 +1,10 @@
-import SignInForm from '../../../components/SigninForm/SignInForm'
+import LoginForm from '../../../components/LoginForm/LoginForm'
 import './login.scss'
 
 function LoginPage() {
     return (
         <main className='login-page'>
-            <SignInForm/>
+            <LoginForm/>
         </main>
     )
 }

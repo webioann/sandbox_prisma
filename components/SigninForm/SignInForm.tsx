@@ -93,19 +93,3 @@ function SignInForm() {
 }
 
 export default SignInForm;
-// const handlesubmit: FormEventHandler<HTMLFormElement> = async (event) => {
-//     event.preventDefault()
-//     const formData = new FormData(event.currentTarget)
-//     try {
-//         const response = await signIn("credentials", {
-//             name: formData.get('name'),
-//             email: formData.get('email'),
-//             password: formData.get('password'),
-//             redirect: false
-//         })
-//         console.log('RES Sign In---------> ', response)
-//         if (response) { router.push('/') }
-//         else { throw new Error('Failed on Sign in form') }
-//     } 
-//     catch (error) { throw new Error('ERROR in Signup form') }
-// }
