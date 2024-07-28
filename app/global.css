@@ -20,7 +20,7 @@
     
 }
 html, body{
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
     color: var(--main-text);
     width: 100%;
     scroll-behavior: smooth;
@@ -77,4 +77,5 @@ html, body{
     padding: 5px;
     border: 1px solid #fff;
     border-radius: 5px;
+    margin: 20px;
 }
