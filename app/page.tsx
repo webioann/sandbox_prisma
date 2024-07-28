@@ -1,5 +1,5 @@
-import Todo from "./components/Todo"
-import AddTodoInput from "./components/AddTodoInput";
+import Todo from "../components/Todo"
+import AddTodoInput from "../components/AddTodoInput";
 import type { TodoType } from "@/types/todo.types";
 import './global.css'
 

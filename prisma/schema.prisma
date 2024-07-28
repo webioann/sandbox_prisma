@@ -1,23 +1,14 @@
 generator client {
   provider = "prisma-client-js"
 }
-// type IUserModelSchema {
-//     name  String 
-//     email String
-//     password  String 
-//     image    String?
-//     provider 'google' | 'credentials'
-//     accountCreated Int
-// }
-
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
-model user {
+model User {
   id           String   @id @default(auto()) @map("_id") @db.ObjectId
-  username     String
-  email        String
+  username     String?
+  email        String @unique
   password     String
   image        String
   provider     Provider

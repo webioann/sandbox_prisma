@@ -1,9 +1,9 @@
 'use client';
 import React from 'react'
 import { MdOutlineCheckBox, MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
-import { updateTodoIsComplited } from '../api/actions/update_action'; 
+import { updateTodoIsComplited } from '../app/api/actions/update_action'; 
 import type { TodoType } from '@/types/todo.types';
-import '../Styles/delete-button.scss'
+import './delete-button.scss'
 
 type TodoFromProps = { todo: TodoType }
 

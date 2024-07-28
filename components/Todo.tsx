@@ -3,7 +3,7 @@ import React from 'react'
 import type { TodoType } from "@/types/todo.types"
 import DeleteTodoButton from './DeleteTodoButton'
 import IsComplitedCheckBox from './IsComplitedCheckBox';
-import '../Styles/todo.scss'
+import './todo.scss'
 
 type TodoPropsData = {
     data: TodoType
