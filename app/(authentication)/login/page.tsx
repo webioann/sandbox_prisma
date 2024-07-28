@@ -1,8 +1,11 @@
-import React from 'react'
+import SignInForm from '../../../components/SigninForm/SignInForm'
+import './login.scss'
 
 function LoginPage() {
     return (
-        <div>Login page is here</div>
+        <main className='login-page'>
+            <SignInForm/>
+        </main>
     )
 }
 

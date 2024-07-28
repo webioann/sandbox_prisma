@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 import './global.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Roboto_Flex({ subsets: ["latin"], weight: ['400', '600', '800'] });
 
 export const metadata: Metadata = {
   title: "Prisma sandbox",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }

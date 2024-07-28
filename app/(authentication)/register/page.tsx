@@ -1,12 +1,12 @@
 import SignInForm from '../../../components/SigninForm/SignInForm'
-import '../index.scss'
+import './register.scss'
 
-function SigninPage() {
+function RegisterPage() {
     return (
-        <div className='signin-page'>
+        <div className='register-page'>
             <SignInForm/>
         </div>
     )
 }
 
-export default SigninPage
+export default RegisterPage
