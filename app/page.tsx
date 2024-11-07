@@ -2,7 +2,8 @@ import Link from "next/link"
 import SignOutButton from "@/components/SignOutButton/SignOutButton"; 
 import Sidebar from "@/components/Sidebar/Sidebar"
 import WorkspacesList from '../components/WorkspacesList/WorkspacesList'
-import AppLogo from "@/components/AppLogo/AppLogo";
+import AppLogo from "@/components/AppLogo/AppLogo"
+import SideNavigation from "@/components/SideNavigation/SideNavigation";
 import './global.css'
 
 export default async function Home() {
@@ -15,7 +16,7 @@ export default async function Home() {
       <Sidebar>
         <AppLogo/>
         <WorkspacesList/>
-        
+        <SideNavigation/>
         {/* navigation menu */}
         <section></section>
         {/* projects section */}

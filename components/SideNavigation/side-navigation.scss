@@ -1,0 +1,20 @@
+nav{
+    display: grid;
+    gap: 10px;
+    padding: 1rem 0;
+    .nav-link{
+        color: grey;
+        text-decoration: none;
+        display: flex;
+        padding: 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        .link-name{
+            font-weight: 400;
+            padding-left: 0.5rem;
+        }
+    }
+    .active{
+        background-color: #fff;
+    }
+}

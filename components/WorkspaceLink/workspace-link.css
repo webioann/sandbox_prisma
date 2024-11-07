@@ -5,6 +5,7 @@
     background-color: #e5e5e5;
     padding: 3px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .workspace-name{
     flex: 1;
