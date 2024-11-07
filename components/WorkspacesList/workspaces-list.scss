@@ -1,0 +1,18 @@
+.workspaces{
+    border-width: 1px;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .workspaces-header{
+        display: flex;
+        padding-bottom: 1rem;
+        .header-title{
+            flex: 1;
+        }
+    }
+    .workspaces-list{
+        display: grid;
+        gap: 10px;
+    }
+}

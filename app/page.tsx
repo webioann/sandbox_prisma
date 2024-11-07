@@ -1,7 +1,8 @@
 import Link from "next/link"
 import SignOutButton from "@/components/SignOutButton/SignOutButton"; 
 import Sidebar from "@/components/Sidebar/Sidebar"
-import WorkspaceLink from "@/components/WorkspaceLink/WorkspaceLink";
+import WorkspacesList from '../components/WorkspacesList/WorkspacesList';
+
 import './global.css'
 
 export default async function Home() {
@@ -18,16 +19,7 @@ export default async function Home() {
           <h3>Task Manager</h3>
         </section>
 
-        {/* workspaces section */}
-        <section className="workspaces">
-          <div>
-            <p className="workspaces-title">WORKSPACES</p>
-            <WorkspaceLink workspace_name="Superb Comp"/>
-          </div>
-          <ul className="workspace-item">
-            
-          </ul>
-        </section>
+        <WorkspacesList/>
          
         {/* navigation menu */}
         <section></section>
