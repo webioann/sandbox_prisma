@@ -15,7 +15,9 @@ function WorkspacesList() {
                     <AiFillPlusCircle color='#b5b5b5' size={20}/>
                 </header>
                 <ul className='workspaces-list'>
-                    {data.map((item) => <WorkspaceLink workspace_name={item.name}/>)}
+                    {data.map((item) => 
+                        <WorkspaceLink workspace_name={item.name}/>)
+                    }
                 </ul>
             </div>
         </section>

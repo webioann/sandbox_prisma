@@ -1,8 +1,8 @@
 import Link from "next/link"
 import SignOutButton from "@/components/SignOutButton/SignOutButton"; 
 import Sidebar from "@/components/Sidebar/Sidebar"
-import WorkspacesList from '../components/WorkspacesList/WorkspacesList';
-
+import WorkspacesList from '../components/WorkspacesList/WorkspacesList'
+import AppLogo from "@/components/AppLogo/AppLogo";
 import './global.css'
 
 export default async function Home() {
@@ -13,14 +13,9 @@ export default async function Home() {
 
       </div>
       <Sidebar>
-        {/* top logo section */}
-        <section className="logo-section">
-          {/* icon */}
-          <h3>Task Manager</h3>
-        </section>
-
+        <AppLogo/>
         <WorkspacesList/>
-         
+        
         {/* navigation menu */}
         <section></section>
         {/* projects section */}

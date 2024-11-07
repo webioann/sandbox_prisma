@@ -1,0 +1,9 @@
+.logo-section{
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    gap: 10px;
+    .app-name{
+        font-weight: 600;
+    }
+}
