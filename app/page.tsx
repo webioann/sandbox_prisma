@@ -7,27 +7,34 @@ import './global.css'
 export default async function Home() {
 
   return (
-    <>
-      <aside>
+    <div className="main-container">
+      <div>
+
+      </div>
+      <Sidebar>
         {/* top logo section */}
         <section className="logo-section">
           {/* icon */}
           <h3>Task Manager</h3>
         </section>
+
         {/* workspaces section */}
         <section className="workspaces">
           <div>
-            <p className="workspaces-title"></p>
-            <WorkspaceLink/>
+            <p className="workspaces-title">WORKSPACES</p>
+            <WorkspaceLink workspace_name="Superb Comp"/>
           </div>
           <ul className="workspace-item">
             
           </ul>
         </section>
+         
         {/* navigation menu */}
         <section></section>
         {/* projects section */}
         <section></section>
+      </Sidebar>
+      <aside>
       </aside>
 
       <main className="main">
@@ -39,6 +46,6 @@ export default async function Home() {
           <h1>HOME PAGE</h1>
         </section>
       </main>
-    </>
+    </div>
   );
 }

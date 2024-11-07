@@ -1,13 +1,18 @@
 import React from 'react'
-import BadgeWithSymbol from '../BadgeWithSymbol/BadgeWithSymbol';
+import BadgeWithSymbol from '../BadgeWithSymbol/BadgeWithSymbol'
+import { PiArrowsDownUp } from "react-icons/pi";
 import './workspace-link.css'
 
-function WorkspaceLink() {
+type workspaceProps = {
+    workspace_name: string
+}
+
+function WorkspaceLink({workspace_name}: workspaceProps) {
     return (
-        <div className='shield'>
-            <BadgeWithSymbol variant='big-cube' symbol='aqertgtq'/>
-            <BadgeWithSymbol variant='cube' symbol='aryey'/>
-            <BadgeWithSymbol variant='circle' symbol='agre'/>
+        <div className='workspace-link'>
+            <BadgeWithSymbol variant='big-cube' symbol={workspace_name}/>
+            <h4 className='workspace-name'>{workspace_name}</h4>
+            <PiArrowsDownUp color='grey' size={20}/>
         </div>
     )
 }

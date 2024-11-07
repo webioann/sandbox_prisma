@@ -7,11 +7,12 @@ type badgeProps = {
 }
 
 function BadgeWithSymbol({ variant, symbol }: badgeProps) {
+    let protectedSymbol = symbol === '' ? 'A' : symbol
     return (
         <div className={variant}>
-            {symbol[0].toUpperCase()}
+            {protectedSymbol[0].toUpperCase()}
         </div>
     )
 }
 
-export default BadgeWithSymbol
+export default BadgeWithSymbol;

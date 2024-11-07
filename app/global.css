@@ -60,12 +60,10 @@ html, body{
     min-width: 100%;
     min-height: 100vh;
 }
-.container{
-    max-width: 1024px;
+.main-container{
+    max-width: 1400px;
     margin: 0 auto;
-    display: grid;
-    justify-content: center;
-    padding-top: 50px;
+    border: 1px solid red;
 }
 .link-btn{
     padding: 5px;

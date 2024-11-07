@@ -1,0 +1,13 @@
+.workspace-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e5e5e5;
+    padding: 3px;
+    border-radius: 5px;
+}
+.workspace-name{
+    flex: 1;
+    padding: 0 0.5rem;
+    font-weight: 400;
+}
