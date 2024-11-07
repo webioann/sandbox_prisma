@@ -1,0 +1,39 @@
+.big-cube{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 15%;
+    background-color: #2361ea;
+    /* color */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cube{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 15%;
+    background-color: #2361ea;
+    font-size: 0.6rem;
+    /* color */
+    color: white;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #b5b5b5;
+    /* color */
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
