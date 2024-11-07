@@ -10,6 +10,6 @@ export async function createNewTodo(formData: FormData) {
         isCompleted: false
         },
     });
-    revalidatePath("/");
+    revalidatePath("/todos");
     
 }

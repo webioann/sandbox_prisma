@@ -8,5 +8,5 @@ export async function deleteTodo(todoId: string) {
             id: todoId,
         },
         });
-        revalidatePath("/");
+        revalidatePath("/todos");
     }

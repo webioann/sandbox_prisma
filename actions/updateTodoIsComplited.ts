@@ -11,5 +11,5 @@ export async function updateTodoIsComplited(formData: FormData) {
     await prisma.todo.update({
         where: { id: todoId }, data: { isCompleted: newStatus },
     })
-    revalidatePath('/')
+    revalidatePath('/todos')
 }
