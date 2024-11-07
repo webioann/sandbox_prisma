@@ -25,23 +25,23 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                         const passwordsMatch = await bcrypt.compare(password, user.password)
                         if(passwordsMatch) {
                             const { password, ...userWithoutPassword } = user
-                            console.log('USER_DOC --> ', user)
-                            console.log('USER_WITHOUT_PASSWORD --> ', userWithoutPassword)
+                            // console.log('USER_WITHOUT_PASSWORD --> ', userWithoutPassword)
                             return userWithoutPassword
                         }
                         if(!passwordsMatch) { throw new Error('Not correct password') }
                     }
                     // if (!user) { throw new Error("User not found.") }
-                    if(!user) {
-                        const hashedPassword = bcrypt.hash(password, 10)
-                        await prisma.user.create({data: {
-                            username: 'Johny',
-                            email: '',
-                            password: hashedPassword,
-                            image: 'EMPTY',
-                            provider: 'credentials'
-                        }})
-                    }
+                    if (!user) { return null }
+                    // if(!user) {
+                    //     const hashedPassword = bcrypt.hash(password, 10)
+                    //     await prisma.user.create({data: {
+                    //         username: 'Johny',
+                    //         email: '',
+                    //         password: hashedPassword,
+                    //         image: 'EMPTY',
+                    //         provider: 'credentials'
+                    //     }})
+                    // }
                     return user
     
                 }
