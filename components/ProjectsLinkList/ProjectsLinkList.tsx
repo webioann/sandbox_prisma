@@ -11,10 +11,17 @@ function ProjectsLinkList() {
         { id: 2, project: 'Website Redisign'}
     ]
 
-    const truncate = (str: string) => {
+    const truncate = (name: string) => {
         const maxLength = 17
-        if(str.length <= maxLength) return str
-        if(str.length > maxLength) return str.substring(0, maxLength) + "..."
+        if(name.length <= maxLength) return name
+        if(name.length > maxLength) return name.substring(0, maxLength) + "..."
+    }
+    // function create "humanity" path for project id URL ==========
+    const createProjectIdPath = (name: string) => {
+        const pathMaxLength = 25
+        let res = '/project/' + name.slice(0, pathMaxLength).toLowerCase().replaceAll(" ", "_")
+        console.log(res)
+        return res
     }
 
     return (
@@ -26,9 +33,11 @@ function ProjectsLinkList() {
                 </header>
                 <ul className='projects-list'>
                     {data.map((item) => 
-                        <Link href={'/'} className='project-link'>
+                        <Link href={createProjectIdPath(item.project)} className='project-link'>
                             <BadgeWithSymbol variant='cube' symbol={item.project}/>
-                            <h4 className='project-name'>{truncate(item.project)}</h4>
+                            <h4 className='project-name'>
+                                {truncate(item.project)}
+                            </h4>
                         </Link>
                         )
                     }
