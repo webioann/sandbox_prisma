@@ -6,6 +6,7 @@ import { GoHomeFill } from "react-icons/go"
 import { FiSettings } from "react-icons/fi"
 import { RiGroupLine } from "react-icons/ri"
 import { usePathname } from 'next/navigation'
+import { RiCalendarTodoLine } from "react-icons/ri"
 import './side-navigation.scss'
 
 function SideNavigation() {
@@ -27,6 +28,10 @@ function SideNavigation() {
             <Link href={"/members"} className={path === '/members' ? 'nav-link active' : 'nav-link'}>
                 <RiGroupLine/>
                 <h4 className='link-name'>Members</h4>
+            </Link>
+            <Link href={"/todos"} className={path === '/todos' ? 'nav-link active' : 'nav-link'}>
+                <RiCalendarTodoLine/>
+                <h4 className='link-name'>Todos</h4>
             </Link>
         </nav>
     )

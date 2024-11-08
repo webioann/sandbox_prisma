@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import './sidebar.css'
 
 function Sidebar({children}:  Readonly<{ children: React.ReactNode }>) {
