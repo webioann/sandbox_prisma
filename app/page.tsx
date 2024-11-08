@@ -1,10 +1,7 @@
-import './global.css'
+// 'use server'
+// import { redirect } from 'next/navigation'
 
-export default async function Home() {
-
-  return (
-    <div>
-      <h1>HOME PAGE</h1>
-    </div>
-  );
+async function HomePage() {
+  <h1>HOME PAGE</h1>
 }
+export default HomePage;
