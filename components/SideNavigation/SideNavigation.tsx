@@ -25,7 +25,7 @@ function SideNavigation() {
                 <FiSettings/>
                 <h4 className='link-name'>Settings</h4>
             </Link>
-            <Link href={"/members"} className={path === '/members' ? 'nav-link active' : 'nav-link'}>
+            <Link href={"/testpage"} className={path === '/members' ? 'nav-link active' : 'nav-link'}>
                 <RiGroupLine/>
                 <h4 className='link-name'>Members</h4>
             </Link>

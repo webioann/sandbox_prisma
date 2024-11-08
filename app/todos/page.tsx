@@ -20,8 +20,8 @@ async function TodosPage() {
     const todos = await fetchTodo()
     
     return (
-        <main className="main">
-            <section className="container">
+        <main className="todos-page">
+            <section>
                 <Link href='/' className="link-btn">Back to Home</Link>
                 <h1>TODOs</h1>
                 <AddTodoInput/>

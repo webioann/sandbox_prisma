@@ -1,3 +1,8 @@
+.todos-page{
+    background-color: red;
+    display: flex;
+    flex: 1;
+}
 h1{
     padding: 10px;
     text-align: center;
@@ -15,6 +20,5 @@ h1{
 .todo-list{
     display: grid;
     justify-content: center;
-    padding-top: 50px;
     gap: 1rem;
 }
