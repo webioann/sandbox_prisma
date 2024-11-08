@@ -1,7 +1,8 @@
-// 'use server'
-// import { redirect } from 'next/navigation'
+'use server'
+import { redirect } from 'next/navigation'
 
-async function HomePage() {
-  return  null
+async function InitialRootPage() {
+    redirect(`/home`) // Navigate to the Browse page
 }
-export default HomePage;
+
+export default InitialRootPage;

@@ -13,7 +13,7 @@ function Navigation() {
     const path = usePathname()
     return (
         <nav>
-            <Link href={"/"} className={path === '/' ? 'nav-link active' : 'nav-link'}>
+            <Link href={"/home"} className={path === '/' ? 'nav-link active' : 'nav-link'}>
                 <GoHomeFill/>
                 <h4 className='link-name'>Home</h4>
             </Link>
