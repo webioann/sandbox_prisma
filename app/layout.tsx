@@ -3,8 +3,10 @@ import { Roboto_Flex } from "next/font/google"
 import Sidebar from "@/components/Sidebar/Sidebar"
 import WorkspacesList from '../components/WorkspacesList/WorkspacesList'
 import AppLogo from "@/components/AppLogo/AppLogo"
-import SideNavigation from "@/components/SideNavigation/SideNavigation";
-import Container from "@/components/Container/Container";
+import SideNavigation from "@/components/SideNavigation/SideNavigation"
+import ContainerFluid from "@/components/Containers/ContainerFluid"
+import ContainerMain from "@/components/Containers/ContainerMain";
+import TopHeader from "@/components/TopHeader/TopHeader";
 import './global.css'
 
 const font = Roboto_Flex({ subsets: ["latin"], weight: ['400', '600', '800'] });
@@ -18,14 +20,19 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
       <html lang="en">
         <body className={font.className}>
-          <Container width={1400}>
+          <ContainerFluid width={1400}>
             <Sidebar>
               <AppLogo/>
               <WorkspacesList/>
               <SideNavigation/>
             </Sidebar>
+            
+            <ContainerMain>
+              <TopHeader/>  
+            </ContainerMain>
+            
             {children}
-          </Container>
+          </ContainerFluid>
         </body>
       </html>
   );

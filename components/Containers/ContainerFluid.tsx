@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Container = ({ width, children }: { children: React.ReactNode; width: number }) => {
+const ContainerFluid = ({ width, children }: { children: React.ReactNode; width: number }) => {
     
     return (
         <div style={{
@@ -10,12 +10,11 @@ const Container = ({ width, children }: { children: React.ReactNode; width: numb
             marginRight: 'auto',
             height: '100%',
             position: 'relative',
-            padding: '0 1rem',
-            display: 'flex'
+            display: 'flex',
         }}>
             { children }
         </div>
     )
 }
 
-export default Container;
+export default ContainerFluid;

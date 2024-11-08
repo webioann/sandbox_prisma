@@ -1,0 +1,25 @@
+.top-header{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    .header-title{
+        flex: 1;
+        .page-name{
+            font-weight: 500;
+        }
+        .header-discription{
+
+        }
+    }
+    .account-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 15%;
+        background-color: #aaa;
+        color: grey;
+        text-decoration: none;
+    }
+}
