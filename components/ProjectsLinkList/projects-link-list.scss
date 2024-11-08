@@ -1,6 +1,7 @@
 .projects{
     border-width: 1px;
     border-top-style: dashed;
+    border-color: var(--bg-dark);
     padding-top: 1rem;
     padding-bottom: 1rem;
     .projects-header{
@@ -16,13 +17,12 @@
         .project-link{
             display: flex;
             align-items: center;
-            color: grey;
+            color: var(--text-second);
             padding: 5px 0;
             text-decoration: none;
             .project-name{
                 padding-left: 10px;
                 font-weight: 400;
-                
             }
         }
     }

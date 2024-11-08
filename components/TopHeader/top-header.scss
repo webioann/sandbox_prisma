@@ -2,13 +2,17 @@
     display: flex;
     align-items: center;
     padding: 1rem;
+    background-color: #dddddd;
     .header-title{
         flex: 1;
+        color: var(--text-main);
         .page-name{
             font-weight: 500;
         }
         .header-discription{
-
+            color: var(--text-second);
+            font-size: 0.9rem;
+            padding: 5px 0;
         }
     }
     .account-link{
@@ -18,8 +22,8 @@
         width: 2rem;
         height: 2rem;
         border-radius: 15%;
-        background-color: #aaa;
-        color: grey;
+        background-color: var(--bg-dark);
+        color: var(--text-main);
         text-decoration: none;
     }
 }
