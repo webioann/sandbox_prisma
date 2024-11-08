@@ -3,7 +3,7 @@ import styles from './calendar.module.scss'
 
 function CalendarPage() {
     return (
-        <div className={styles.page}>page</div>
+        <div className={styles.page}>Calendar page</div>
     )
 }
 

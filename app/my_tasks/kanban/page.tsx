@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './kanban.module.scss'
 
-function CalendarPage() {
+function KanbanPage() {
     return (
-        <div className={styles.page}>page</div>
+        <div className={styles.page}>Kanban page</div>
     )
 }
 
-export default CalendarPage
+export default KanbanPage
