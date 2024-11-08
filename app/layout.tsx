@@ -5,8 +5,9 @@ import WorkspacesList from '../components/WorkspacesList/WorkspacesList'
 import AppLogo from "@/components/AppLogo/AppLogo"
 import SideNavigation from "@/components/SideNavigation/SideNavigation"
 import ContainerFluid from "@/components/Containers/ContainerFluid"
-import ContainerMain from "@/components/Containers/ContainerMain";
-import TopHeader from "@/components/TopHeader/TopHeader";
+import ContainerMain from "@/components/Containers/ContainerMain"
+import TopHeader from "@/components/TopHeader/TopHeader"
+import ProjectsLinkList from "@/components/ProjectsLinkList/ProjectsLinkList";
 import './global.css'
 
 const font = Roboto_Flex({ subsets: ["latin"], weight: ['400', '600', '800'] });
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <AppLogo/>
               <WorkspacesList/>
               <SideNavigation/>
+              <ProjectsLinkList/>
             </Sidebar>
             
             <ContainerMain>
