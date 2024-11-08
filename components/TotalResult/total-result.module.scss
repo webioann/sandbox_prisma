@@ -1,0 +1,20 @@
+.result_box{
+    padding: 1rem;
+    border-right: 1px dashed var(--bg-second);
+    .top_board{
+        display: flex;
+        gap: 8px;
+        margin-bottom: 10px;
+        .title{
+            color: var(--text-second);
+        }
+        .result{ 
+            color: var(--text-second);
+            font-size: 0.8rem;
+        }
+    }
+    .main_result{
+        color: var(--text-main);
+        font-weight: 600;
+    }
+}
