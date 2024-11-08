@@ -3,7 +3,7 @@ import { Roboto_Flex } from "next/font/google"
 import Sidebar from "@/components/Sidebar/Sidebar"
 import WorkspacesList from '../components/WorkspacesList/WorkspacesList'
 import AppLogo from "@/components/AppLogo/AppLogo"
-import SideNavigation from "@/components/SideNavigation/SideNavigation"
+import Navigation from "@/components/Navigation/Navigation"
 import ContainerFluid from "@/components/Containers/ContainerFluid"
 import ContainerMain from "@/components/Containers/ContainerMain"
 import TopHeader from "@/components/TopHeader/TopHeader"
@@ -27,7 +27,7 @@ export default function RootLayout({ children }: Readonly<{
             <Sidebar>
               <AppLogo/>
               <WorkspacesList/>
-              <SideNavigation/>
+              <Navigation/>
               <ProjectsLinkList/>
             </Sidebar>
             

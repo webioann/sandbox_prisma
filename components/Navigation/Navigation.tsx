@@ -7,9 +7,9 @@ import { FiSettings } from "react-icons/fi"
 import { RiGroupLine } from "react-icons/ri"
 import { usePathname } from 'next/navigation'
 import { RiCalendarTodoLine } from "react-icons/ri"
-import './side-navigation.scss'
+import './navigation.scss'
 
-function SideNavigation() {
+function Navigation() {
     const path = usePathname()
     return (
         <nav>
@@ -17,7 +17,7 @@ function SideNavigation() {
                 <GoHomeFill/>
                 <h4 className='link-name'>Home</h4>
             </Link>
-            <Link href={"/my_tasks"} className={path === '/my-tasks' ? 'nav-link active' : 'nav-link'}>
+            <Link href={"/my_tasks/table"} className={path === '/my-tasks' ? 'nav-link active' : 'nav-link'}>
                 <MdTask/>
                 <h4 className='link-name'>My Tasks</h4>
             </Link>
@@ -37,4 +37,4 @@ function SideNavigation() {
     )
 }
 
-export default SideNavigation;
+export default Navigation;
