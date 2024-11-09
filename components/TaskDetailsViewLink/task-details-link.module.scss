@@ -1,0 +1,21 @@
+.task_view_link{
+    min-width: 100%;
+    background-color: var(--bg-main);
+    border-radius: 8px;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text-main);
+    .task_discription{
+        font-weight: 600;
+    }
+    .task_name_and_time{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-top: 5px;
+        gap: 5px;
+        .termin{
+            color: var(--text-second);
+        }
+    }
+}

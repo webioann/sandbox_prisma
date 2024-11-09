@@ -1,6 +1,9 @@
 import React from 'react'
 import TotalResult from '@/components/TotalResult/TotalResult'
+import TaskDetailsViewLink from '@/components/TaskDetailsViewLink/TaskDetailsViewLink'
+import PersonBoard from '@/components/PersonBoard/PersonBoard'
 import { FaPlus } from "react-icons/fa"
+import { LuSettings } from "react-icons/lu"
 import styles from './home.module.scss'
 
 function HomePage() {
@@ -20,7 +23,7 @@ function HomePage() {
 
                 <div className={styles.tasks_viewer}>
                     {/* assigned tasks block */}
-                    <div className={styles.assigned_wrapper}>
+                    <section className={styles.assigned_section}>
                         {/* ========================= */}
                         <div className={styles.assigned_header}>
                             <h4 className={styles.title}>Assigned Tasks ({tasks})</h4>
@@ -29,22 +32,45 @@ function HomePage() {
                             </div>
                         </div>
                         {/* =========================== */}
-                        <ul className={styles.project_viewer}>
-                            <h1>Hello</h1>
+                        <ul className={styles.tasks_viewer_list}>
+                            <TaskDetailsViewLink/>
+                            <TaskDetailsViewLink/>
+                            <TaskDetailsViewLink/>
+                            <TaskDetailsViewLink/>
                         </ul>
                         {/* ============================ */}
                         <button className={styles.show_all_button}>
-                            <p>Show All</p>
+                            <p className={styles.inner_text}>Show All</p>
                         </button>
-                    </div>
+                    </section>
+
+
                     {/* people block */}
-                    
+                    <section className={styles.people_section}>
+                        <div className={styles.people_header}>
+                            <h4 className={styles.title}>People ({2})</h4>
+                            <div className={styles.settings_button}>
+                                <LuSettings size={12} color='grey'/>
+                            </div>
+                        </div>
+                        <ul className={styles.people_list}>
+                            <PersonBoard/>
+                            <PersonBoard/>
+                        </ul>
+                    </section>
+
+
+
                 </div>
 
 
 
-            </div>
+                <div className={styles.projects_viewer}>
+                    PROJECTS
+                </div>
 
+
+            </div>
         </div>
     )
 }

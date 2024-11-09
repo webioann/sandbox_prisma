@@ -1,0 +1,29 @@
+.person_cell{
+    display: grid;
+    align-items: center;
+    gap: 8px;
+    // max-width: 33.333%;
+    border: 1px solid var(--bg-second);
+    border-radius: 5px;
+    padding: 10px;
+    .person_icon{
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-color: var(--bg-dark);
+        color: var(--text-second);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .person_name{
+        text-align: center;
+        font-weight: 500;
+    }
+    .person_email{
+        text-align: center;
+        font-size: 0.8rem;
+        color: var(--text-second);
+    }
+}

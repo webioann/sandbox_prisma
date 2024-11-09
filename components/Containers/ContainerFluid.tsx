@@ -11,7 +11,6 @@ const ContainerFluid = ({ width, children }: { children: React.ReactNode; width:
             height: '100%',
             position: 'relative',
             display: 'flex',
-            overflow: 'hidden'
         }}>
             { children }
         </div>
