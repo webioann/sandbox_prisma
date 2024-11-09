@@ -3,6 +3,6 @@ import styles from './table.module.scss'
 
 export default function TablePage() {
     return (
-        <div className={styles.page}>Table page</div>
+        <div className={styles.page}>Table page oooooooooooooooo</div>
     )
 };
