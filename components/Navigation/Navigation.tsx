@@ -11,13 +11,21 @@ import './navigation.scss'
 
 function Navigation() {
     const path = usePathname()
+
+    const choosePathVariant = (fullPath: string) => {
+        if(fullPath === '/my_tasks/table') return true
+        if(fullPath === '/my_tasks/kanban') return true
+        if(fullPath === '/my_tasks/calendar') return true
+        else return null
+    }
+
     return (
         <nav>
             <Link href={"/home"} className={path === '/home' ? 'nav-link active' : 'nav-link'}>
                 <GoHomeFill/>
                 <h4 className='link-name'>Home</h4>
             </Link>
-            <Link href={"/my_tasks/table"} className={path === '/my-tasks' ? 'nav-link active' : 'nav-link'}>
+            <Link href={"/my_tasks/table"} className={choosePathVariant(path) ? 'nav-link active' : 'nav-link'}>
                 <MdTask/>
                 <h4 className='link-name'>My Tasks</h4>
             </Link>

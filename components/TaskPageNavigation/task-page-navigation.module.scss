@@ -1,0 +1,30 @@
+.links_header{
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 2px dotted var(--bg-dark);
+    .page_links_stack{
+        display: flex;
+        flex: 1;
+        .task_page_link{
+            background-color: var(--bg-second);
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            margin-right: 10px;
+            color: var(--text-second);
+        }
+    }
+    .create_button{
+        background-color: var(--bg-contrast);
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        .create_button_text{
+            color: var(--bg-main);
+            margin-left: 5px;
+        }
+    }
+}
