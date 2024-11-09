@@ -1,4 +1,18 @@
 .filters_row{
+    display: flex;
+    gap: 8px;
+    padding: 1rem 0;
+    .filter{
+        border: 1px solid var(--bg-second);
+        border-radius: 5px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .filter_title{
+            color: var(--text-main);
+        }
+    }
 }
 // tasks full list --------------
 .tasks_full_list{
