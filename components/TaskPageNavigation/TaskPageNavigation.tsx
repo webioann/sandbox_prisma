@@ -7,12 +7,29 @@ import styles from './task-page-navigation.module.scss'
 
 function TaskPageNavigation() {
     const path = usePathname()
+    const table = "/my_tasks/table";
+    const kanban = "/my_tasks/kanban";
+    const calendar = "/my_tasks/calendar";
+
+    const active = styles.active
     return (
         <div className={styles.links_header}>
             <div className={styles.page_links_stack}>
-                <Link href={"/my_tasks/table"} className={styles.task_page_link}>Table</Link>
-                <Link href={"/my_tasks/kanban"} className={styles.task_page_link}>Kanban</Link>
-                <Link href={"/my_tasks/calendar"} className={styles.task_page_link}>Calendar</Link>
+                <Link 
+                    href={table} 
+                    className={`${styles.task_page_link} ${path === table && active}`}>
+                    Table
+                </Link>
+                <Link 
+                    href={kanban} 
+                    className={`${styles.task_page_link} ${path === kanban && active}`}>
+                    Kanban
+                </Link>
+                <Link 
+                    href={calendar} 
+                    className={`${styles.task_page_link} ${path === calendar && active}`}>
+                    Calendar
+                </Link>
             </div>
             <div className={styles.create_button}>
                 <FaPlus size={12} color='white'/>

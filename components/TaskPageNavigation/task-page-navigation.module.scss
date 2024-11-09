@@ -15,6 +15,9 @@
             margin-right: 10px;
             color: var(--text-second);
         }
+        .active{
+            background-color: var(--bg-dark);
+        }
     }
     .create_button{
         background-color: var(--bg-contrast);
