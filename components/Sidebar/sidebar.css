@@ -4,13 +4,13 @@
     background-color: var(--bg-second);
     min-height: 100vh;
     padding: 0 1rem;
-    transform: translateX(-320px);
-    display: none;
+    /* transform: translateX(-320px);
+    display: none; */
 
 }
-@media (min-width: 580px) {
+/* @media (min-width: 580px) {
     .sidebar{
         display: block;
         transform: translateX(0);
     }
-}
+} */

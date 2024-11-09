@@ -12,7 +12,7 @@ function TotalResult({total, title}: resultProps) {
         <div className={styles.result_box}>
             <div className={styles.top_board}>
                 <p className={styles.title}>{title}</p>
-                <BiSolidUpArrow size={14} color='green'/>
+                <BiSolidUpArrow size={12} color='green'/>
                 <span className={styles.result}>{total}</span>
             </div>
             <h3 className={styles.main_result}>{total}</h3>
