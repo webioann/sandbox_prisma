@@ -1,0 +1,11 @@
+.project_board{
+    border: 1px solid var(--bg-second);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    .project_name{
+        flex: 1;
+        margin-left: 5px;
+    }
+}

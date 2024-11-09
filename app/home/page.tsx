@@ -2,12 +2,14 @@ import React from 'react'
 import TotalResult from '@/components/TotalResult/TotalResult'
 import TaskDetailsViewLink from '@/components/TaskDetailsViewLink/TaskDetailsViewLink'
 import PersonBoard from '@/components/PersonBoard/PersonBoard'
+import ProjectBoard from '@/components/ProjectBoard/ProjectBoard'
 import { FaPlus } from "react-icons/fa"
 import { LuSettings } from "react-icons/lu"
 import styles from './home.module.scss'
 
 function HomePage() {
     let tasks = 14
+    let projects = 2
     return (
         <div className={styles.page}>
             {/* ======================= */}
@@ -56,6 +58,7 @@ function HomePage() {
                         <ul className={styles.people_list}>
                             <PersonBoard/>
                             <PersonBoard/>
+                            <PersonBoard/>
                         </ul>
                     </section>
 
@@ -65,9 +68,18 @@ function HomePage() {
 
 
 
-                <div className={styles.projects_viewer}>
-                    PROJECTS
-                </div>
+                <section className={styles.projects_viewer}>
+                    <div className={styles.projects_header}>
+                        <h4 className={styles.title}>Projects ({projects})</h4>
+                        <div className={styles.plus_button}>
+                            <FaPlus size={12} color='grey'/>
+                        </div>
+                    </div>
+                    <ul className={styles.projects_list}>
+                        <ProjectBoard/>
+                        <ProjectBoard/>
+                    </ul>
+                </section>
 
 
             </div>
