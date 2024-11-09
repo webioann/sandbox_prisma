@@ -1,4 +1,5 @@
 import React from 'react'
+import TaskTableItem from '@/components/TaskTableItem/TaskTableItem'
 import { FiCalendar } from "react-icons/fi"
 import { LuListChecks } from "react-icons/lu"
 import { GoPerson } from "react-icons/go"
@@ -37,7 +38,13 @@ export default function TablePage() {
 
 
 
-            <ul className={styles.tasks_full_list}></ul>
+            <ul className={styles.tasks_full_list}>
+                <div className={styles.table_header}>
+
+                </div>
+                <TaskTableItem/>
+
+            </ul>
 
 
 

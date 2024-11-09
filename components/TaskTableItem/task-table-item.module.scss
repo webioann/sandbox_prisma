@@ -1,0 +1,16 @@
+.table_item{
+    display: flex;
+    border: 1px solid red;
+    .tasks_full_list{
+        .table_header{
+
+        }
+    }
+
+
+    .colored_status{
+        background-color: orange;
+        padding: 3px 10px;
+        border-radius: 50%;
+    }
+}
