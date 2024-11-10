@@ -8,7 +8,7 @@ import { PiArrowsDownUp } from "react-icons/pi"
 
 function TaskTableItem() {
 
-    const dueDateDay = new Date(2024, 10, 18).valueOf()
+    const dueDateDay = new Date(2024, 10, 29).valueOf()
 
     const createAndHighlightDueDate: createAndHighlightDueDateType = (dueDate: number, criticalPeriod: number) => {
         const currentDate = Date.now();
@@ -31,7 +31,7 @@ function TaskTableItem() {
         return { dueDateInReadbleFormat, status }
     } 
     let { dueDateInReadbleFormat, status } = createAndHighlightDueDate(dueDateDay, 3)
-    // console.log(dueDateInReadbleFormat);
+    console.log(dueDateDay);
     // console.log(status);
 
     return (

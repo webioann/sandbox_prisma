@@ -1,13 +1,13 @@
 // types for My Tasks page ====
 // type statusHighlightColorsTypes = ''
-type statusesType = 
+export type StatusesType = 
     |'Backlog'
     |'Todo'
     |'In Review'
     |'In Progress'
     |'Done'
 type statusesListType = {
-    status: statusesType
+    status: StatusesType
     statusHighlightColor: string
 }
 export const taskStatusesList: Array<statusesListType> = [
@@ -30,11 +30,11 @@ export type createAndHighlightDueDateType =
         status: dueDateStatusColors
     }
 // one single task object type
-interface ITaskType {
+export interface ITaskType {
     task_id: string
     task_checked: boolean
     assigned_person: string
-    status: statusesType
+    status: StatusesType
     due_date: number
     task_created_at: number
 }
@@ -45,4 +45,4 @@ export interface IProjectType {
     project_due_date: number
     project_created_at: number
 }
-
+export type ProjectsDataType = Array<IProjectType>
