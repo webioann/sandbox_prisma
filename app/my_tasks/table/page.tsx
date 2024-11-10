@@ -10,8 +10,20 @@ import styles from './table.module.scss'
 import { TbArrowsSort } from "react-icons/tb"
 import { IoIosArrowDown } from "react-icons/io"
 
+import { ProjectsData } from '../../../MOCH_DATA'
+import type { ProjectsDataType } from '../../../types/tasks.types'
+
+
 export default function TablePage() {
-    
+
+    const T = () => {
+        let result = ProjectsData.map((project) => {
+            project.project_tasks_list.map(() => {
+
+            })
+        })
+    }
+
     return (
         <>
             <div className={styles.filters_row}>
@@ -42,8 +54,13 @@ export default function TablePage() {
                 <div className={styles.table_header}>
 
                 </div>
-                <TaskTableItem/>
-
+                <ul className="table_of_projects">
+                    {ProjectsData.map((project) => 
+                        project.project_tasks_list.map((task) => { return (<TaskTableItem project={project} task={task}/>)})
+                    )}
+                </ul>
+                
+                
             </ul>
 
 

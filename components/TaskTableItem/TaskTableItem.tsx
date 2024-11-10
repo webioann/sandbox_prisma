@@ -5,10 +5,15 @@ import type { dueDateStatusColors, createAndHighlightDueDateType } from '../../t
 import styles from './task-table-item.module.scss'
 import BadgeWithSymbol from '../BadgeWithSymbol/BadgeWithSymbol'
 import { PiArrowsDownUp } from "react-icons/pi"
+import type { IProjectType, ITaskType } from '../../types/tasks.types'
 
-function TaskTableItem() {
+type props = {
+    project: IProjectType
+    task: ITaskType
+}
 
-    const dueDateDay = new Date(2024, 10, 29).valueOf()
+const  TaskTableItem: React.FC<props> = ({project, task}) => {
+    // const dueDateDay = new Date(2024, 10, 29).valueOf()
 
     const createAndHighlightDueDate: createAndHighlightDueDateType = (dueDate: number, criticalPeriod: number) => {
         const currentDate = Date.now();
@@ -30,26 +35,27 @@ function TaskTableItem() {
 
         return { dueDateInReadbleFormat, status }
     } 
-    let { dueDateInReadbleFormat, status } = createAndHighlightDueDate(dueDateDay, 3)
-    console.log(dueDateDay);
-    // console.log(status);
+    let { dueDateInReadbleFormat, status } = createAndHighlightDueDate(task.due_date, 3)
+    // console.log(dueDateDay);
+    console.log(status);
 
     return (
         <div className={styles.table_item}>
 
             <div className={styles.task_name}>
                 <MdOutlineCheckBoxOutlineBlank/>
-                <p className={styles.task_dicription}>Conduct usability testing</p>
+                <p className={styles.task_dicription}>{task.task_discription}</p>
             </div>
 
             <div className={styles.project_cell}>
-                <BadgeWithSymbol variant='cube' symbol='ddd'/>
-                <p className={styles.project_name}>Mobile App Development</p>
+                <BadgeWithSymbol variant='cube' symbol={project.project_name}/>
+                <p className={styles.project_name}>{project.project_name}</p>
             </div>
 
             <div className={styles.assigned_person}>
                 <div className={styles.person_badge}>J</div>
-                <p className={styles.person_name}>Antonio</p>
+                {/* ============================================================ */}
+                <p className={styles.person_name}>{task.assigned_person}</p>
             </div>
 
             <div className={styles.due_date}>
@@ -57,13 +63,13 @@ function TaskTableItem() {
                     className={styles.date}
                     style={{color: status}}
                     >
-                    {dueDateInReadbleFormat
-                }</p>
+                    { dueDateInReadbleFormat }</p>
             </div>
 
             <div className={styles.task_status}>
-                <p className={styles.colored_status}>
-                    Due
+                <p  style={{backgroundColor: 'green'}}
+                    className={styles.colored_status}>
+                    {task.status}
                 </p>
                 <HiDotsVertical  size={16} color='#060606'/>
             </div>

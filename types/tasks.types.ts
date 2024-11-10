@@ -32,6 +32,7 @@ export type createAndHighlightDueDateType =
 // one single task object type
 export interface ITaskType {
     task_id: string
+    task_discription: string
     task_checked: boolean
     assigned_person: string
     status: StatusesType
