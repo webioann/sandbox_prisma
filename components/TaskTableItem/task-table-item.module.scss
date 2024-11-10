@@ -1,16 +1,14 @@
 .table_item{
     display: grid;
     grid-template-columns: 6.5fr 6.5fr 4fr 4fr 4fr;
-    padding: 5px;
-    border: 1px solid red;
-
-
+    padding: 0.5rem;
+    border-top: 1px solid var(--bg-second);
     .task_name{
         display: flex;
         align-items: center;
         // border: 1px solid red;
         .task_dicription{
-            margin-left: 5px;
+            margin-left: 0.5rem;
         }
     }
 
@@ -20,7 +18,7 @@
         align-items: center;
         // border: 1px solid red;
         .project_name{
-            margin-left: 5px;
+            margin-left: 0.5rem;
         }
     }
     // asigned person ----------
@@ -38,7 +36,7 @@
             justify-content: center;
         }
         .person_name{
-            margin-left: 5px;
+            margin-left: 0.5rem;
         }
     }
     // due date ----------------
@@ -55,15 +53,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // border: 1px solid red;
-        .colored_status{
-            background-color: orange;
-            height: 24px;
-            border-radius: 12px;
-            padding: 5px 1rem;
-            display: flex;
-            align-items: center;
-        }
     }
 }
 // && daysByDutDate - criticalPeriodInMiliseconds + dayInMiliseconds < criticalPeriodInMiliseconds

@@ -15,8 +15,13 @@
     }
 }
 // tasks full list --------------
-.tasks_full_list{
+.tasks_table{
+    margin-bottom: 1rem;
+    border: 1px solid var(--bg-second);
+    border-radius: 8px;
+    .table_of_projects{
 
+    }
 }
 // pagination -----------
 .pagination{

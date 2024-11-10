@@ -4,6 +4,8 @@ import { HiDotsVertical } from "react-icons/hi"
 import type { dueDateStatusColors, createAndHighlightDueDateType } from '../../types/tasks.types'
 import styles from './task-table-item.module.scss'
 import BadgeWithSymbol from '../BadgeWithSymbol/BadgeWithSymbol'
+import BadgeWithSymbolRounded from '../BadgeWithSymbolRounded/BadgeWithSymbolRounded'
+import BadgeForStatusColored from '../BadgeForStatusColored/BadgeForStatusColored'
 import { PiArrowsDownUp } from "react-icons/pi"
 import type { IProjectType, ITaskType } from '../../types/tasks.types'
 
@@ -43,7 +45,7 @@ const  TaskTableItem: React.FC<props> = ({project, task}) => {
         <div className={styles.table_item}>
 
             <div className={styles.task_name}>
-                <MdOutlineCheckBoxOutlineBlank/>
+                { task.task_checked ? <MdOutlineCheckBox/> : <MdOutlineCheckBoxOutlineBlank/>}
                 <p className={styles.task_dicription}>{task.task_discription}</p>
             </div>
 
@@ -53,11 +55,10 @@ const  TaskTableItem: React.FC<props> = ({project, task}) => {
             </div>
 
             <div className={styles.assigned_person}>
-                <div className={styles.person_badge}>J</div>
-                {/* ============================================================ */}
+                <BadgeWithSymbolRounded symbol={task.assigned_person}/>
                 <p className={styles.person_name}>{task.assigned_person}</p>
             </div>
-
+{/* =========== in work ============ */}
             <div className={styles.due_date}>
                 <p 
                     className={styles.date}
@@ -65,12 +66,9 @@ const  TaskTableItem: React.FC<props> = ({project, task}) => {
                     >
                     { dueDateInReadbleFormat }</p>
             </div>
-
+{/* ================================== */}
             <div className={styles.task_status}>
-                <p  style={{backgroundColor: 'green'}}
-                    className={styles.colored_status}>
-                    {task.status}
-                </p>
+                <BadgeForStatusColored status={task.status}/>
                 <HiDotsVertical  size={16} color='#060606'/>
             </div>
         </div>

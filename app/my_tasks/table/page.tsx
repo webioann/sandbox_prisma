@@ -50,18 +50,20 @@ export default function TablePage() {
 
 
 
-            <ul className={styles.tasks_full_list}>
+            <section className={styles.tasks_table}>
+                {/* ========= need create ========= */}
                 <div className={styles.table_header}>
 
                 </div>
-                <ul className="table_of_projects">
+                {/* =================== */}
+                <ul className={styles.table_of_projects}>
                     {ProjectsData.map((project) => 
                         project.project_tasks_list.map((task) => { return (<TaskTableItem project={project} task={task}/>)})
                     )}
                 </ul>
                 
                 
-            </ul>
+            </section>
 
 
 
