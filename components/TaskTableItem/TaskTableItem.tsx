@@ -6,29 +6,38 @@ import BadgeWithSymbol from '../BadgeWithSymbol/BadgeWithSymbol'
 import { PiArrowsDownUp } from "react-icons/pi"
 
 function TaskTableItem() {
+    
+    const newdate = Date.now()
+    console.log(new Date(newdate).getMonth( ));
+    const dates = 1731218644149
+
     return (
         <div className={styles.table_item}>
-            <div className="task_name">
+
+            <div className={styles.task_name}>
                 <MdOutlineCheckBoxOutlineBlank/>
-                <p>Conduct usability testing</p>
+                <p className={styles.task_dicription}>Conduct usability testing</p>
             </div>
 
-            <div className="project_name">
+            <div className={styles.project_cell}>
                 <BadgeWithSymbol variant='cube' symbol='ddd'/>
-                <p>Mobile App Development</p>
+                <p className={styles.project_name}>Mobile App Development</p>
             </div>
 
-            <div className="assigned_person">
-                <div className="rounded_badge">J</div>
-                <p>Antonio</p>
+            <div className={styles.assigned_person}>
+                <div className={styles.person_badge}>J</div>
+                <p className={styles.person_name}>Antonio</p>
             </div>
 
-            <div className="due_date">
-                <p>October 7th, 2024</p>
+            <div className={styles.due_date}>
+                <p className={styles.date}>October 7th, 2024</p>
             </div>
 
-            <div className="task_status">
-                <p className={styles.colored_status}>In Progres</p>
+            <div className={styles.task_status}>
+                <p className={styles.colored_status}>
+                    Due
+                </p>
+                <HiDotsVertical  size={16} color='#060606'/>
             </div>
         </div>
     )

@@ -1,16 +1,68 @@
 .table_item{
-    display: flex;
+    display: grid;
+    grid-template-columns: 6.5fr 6.5fr 4fr 4fr 4fr;
+    padding: 5px;
     border: 1px solid red;
-    .tasks_full_list{
-        .table_header{
 
+
+    .task_name{
+        display: flex;
+        align-items: center;
+        // border: 1px solid red;
+        .task_dicription{
+            margin-left: 5px;
         }
     }
 
-
-    .colored_status{
-        background-color: orange;
-        padding: 3px 10px;
-        border-radius: 50%;
+    // project cell -----------
+    .project_cell{
+        display: flex;
+        align-items: center;
+        // border: 1px solid red;
+        .project_name{
+            margin-left: 5px;
+        }
+    }
+    // asigned person ----------
+    .assigned_person{
+        display: flex;
+        align-items: center;
+        // border: 1px solid red;
+        .person_badge{
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: var(--bg-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .person_name{
+            margin-left: 5px;
+        }
+    }
+    // due date ----------------
+    .due_date{
+        display: flex;
+        align-items: center;
+        // border: 1px solid red;
+        .date{
+            
+        }
+    }
+    // colored status -------------------
+    .task_status{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // border: 1px solid red;
+        .colored_status{
+            background-color: orange;
+            height: 24px;
+            border-radius: 12px;
+            padding: 5px 1rem;
+            display: flex;
+            align-items: center;
+        }
     }
 }
