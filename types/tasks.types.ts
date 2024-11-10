@@ -27,7 +27,7 @@ export type createAndHighlightDueDateType =
     ) => 
     {
         dueDateInReadbleFormat: string,
-        status: dueDateStatusColors
+        criticalityColor: dueDateStatusColors
     }
 // one single task object type
 export interface ITaskType {

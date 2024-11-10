@@ -1,14 +1,18 @@
 .table_item{
     display: grid;
+    gap: 5px;
     grid-template-columns: 6.5fr 6.5fr 4fr 4fr 4fr;
     padding: 0.5rem;
     border-top: 1px solid var(--bg-second);
+    font-size: 0.8rem;
+    
     .task_name{
         display: flex;
         align-items: center;
         // border: 1px solid red;
         .task_dicription{
             margin-left: 0.5rem;
+            color: var(--text-second);
         }
     }
 
@@ -40,14 +44,6 @@
         }
     }
     // due date ----------------
-    .due_date{
-        display: flex;
-        align-items: center;
-        // border: 1px solid red;
-        .date{
-
-        }
-    }
     // colored status -------------------
     .task_status{
         display: flex;

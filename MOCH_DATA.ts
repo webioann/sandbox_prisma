@@ -21,7 +21,7 @@ export const ProjectsData: ProjectsDataType =
             task_checked: false,
             assigned_person: 'Antonio',
             status: 'In Review',
-            due_date: 1731880800000,
+            due_date: 1731276000000,
             task_created_at: 1731189600000
         },
         {
@@ -30,7 +30,7 @@ export const ProjectsData: ProjectsDataType =
             task_checked: true,
             assigned_person: 'Dave',
             status: 'Backlog',
-            due_date: 1731880800000,
+            due_date: 1731535200000,
             task_created_at: 1731189600000
         },
 
@@ -48,7 +48,7 @@ export const ProjectsData: ProjectsDataType =
             task_checked: false,
             assigned_person: 'woodi',
             status: 'Done',
-            due_date: 1732744800000,
+            due_date: 1731276000000,
             task_created_at: 1731362400000
         },
         {
@@ -57,7 +57,7 @@ export const ProjectsData: ProjectsDataType =
             task_checked: false,
             assigned_person: 'Antonio',
             status: 'In Review',
-            due_date: 1732485600000,
+            due_date: 1731535200000,
             task_created_at: 1731189600000
         },
         {
