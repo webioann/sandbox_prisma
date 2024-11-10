@@ -20,7 +20,7 @@ const  TaskTableItem: React.FC<props> = ({project, task}) => {
         <div className={styles.table_item}>
 
             <div className={styles.task_name}>
-                { task.task_checked ? <MdOutlineCheckBox size={20} color='#d6d6d6'/> : <MdOutlineCheckBoxOutlineBlank size={20} color='#d6d6d6'/>}
+                { task.task_checked ? <MdOutlineCheckBox size={20} color='#8e8e8e'/> : <MdOutlineCheckBoxOutlineBlank size={20} color='#8e8e8e'/>}
                 <p className={styles.task_dicription}>{task.task_discription}</p>
             </div>
 

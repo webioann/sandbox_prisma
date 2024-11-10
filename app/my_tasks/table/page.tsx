@@ -5,9 +5,11 @@ import { LuListChecks } from "react-icons/lu"
 import { GoPerson } from "react-icons/go"
 import { FaRegFolder } from "react-icons/fa"
 import { BsChevronExpand } from "react-icons/bs"
+import { MdOutlineCheckBox, MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
+
 import styles from './table.module.scss'
 
-import { TbArrowsSort } from "react-icons/tb"
+import { TbArrowsUpDown } from "react-icons/tb"
 import { IoIosArrowDown } from "react-icons/io"
 
 import { ProjectsData } from '../../../MOCH_DATA'
@@ -51,8 +53,32 @@ export default function TablePage() {
 
 
             <section className={styles.tasks_table}>
-                {/* ========= need create ========= */}
                 <div className={styles.table_header}>
+                    <div className={styles.column_name_first}>
+                        <MdOutlineCheckBoxOutlineBlank size={20}/>
+                        <p className={styles.task_name_cell}>Task Name</p>
+                        <TbArrowsUpDown/>  
+                    </div>
+
+                    <div className={styles.column_name}>
+                        <p>Progect</p>
+                        <TbArrowsUpDown/>  
+                    </div>
+
+                    <div className={styles.column_name}>
+                        <p>Assignee</p>
+                        <TbArrowsUpDown/>  
+                    </div>
+
+                    <div className={styles.column_name}>
+                        <p>Due Date</p>
+                        <TbArrowsUpDown/>  
+                    </div>
+
+                    <div className={styles.column_name}>
+                        <p>Status</p>
+                        <TbArrowsUpDown/>  
+                    </div>
 
                 </div>
                 {/* =================== */}
