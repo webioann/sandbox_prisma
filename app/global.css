@@ -44,14 +44,14 @@ html, body{
     width: 100%;
     scroll-behavior: smooth;
     height: 100%;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.15;
     font-weight: 400;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-@media (min-width: 580px) {
+/* @media (min-width: 580px) {
     html,
     body {
         font-size: 15px;
@@ -68,4 +68,4 @@ html, body{
     body {
         font-size: 17px;
     }
-}
+} */

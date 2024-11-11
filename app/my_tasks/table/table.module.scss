@@ -1,47 +1,85 @@
-.filters_row{
-    display: flex;
-    gap: 8px;
-    padding: 1rem 0;
-    .filter{
-        border: 1px solid var(--bg-second);
-        border-radius: 5px;
-        padding: 5px 10px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        .filter_title{
-            color: var(--text-main);
-        }
-    }
-}
-// tasks full list --------------
-.tasks_table{
-    margin-bottom: 1rem;
-    border: 1px solid var(--bg-second);
-    border-radius: 8px;
-    .table_header{
-        display: grid;
-        gap: 5px;
-        grid-template-columns: 6.5fr 6.5fr 4fr 4fr 4fr;
-        padding: 0.5rem;
-        border-top: 1px solid var(--bg-second);
-        font-size: 0.8rem;
-        .column_name{
+.table_page{
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    .table_wrapper{
+        border: 1px solid #f4f4f4;
+        border-radius: 8px;
+        padding: 0 1rem;
+        // FILTERS ROW ===
+        .filters_row{
             display: flex;
-            gap: 0.5rem;
-            align-items: center;
-            color: var(--text-second);
-            padding-left: 1rem;
+            gap: 8px;
+            padding: 1rem 0;
+            .filter{
+                border: 1px solid var(--bg-second);
+                border-radius: 5px;
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .filter_title{
+                    color: var(--text-main);
+                }
+            }
         }
-        .column_name_first{
+        // TABLE ==============
+        .tasks_table{
+            border: 1px solid var(--bg-second);
+            border-radius: 8px;
+            // HEADER ===
+            .table_header{
+                display: grid;
+                gap: 5px;
+                grid-template-columns: 6.5fr 6.5fr 4fr 4fr 4fr;
+                padding: 0.5rem;
+                border-top: 1px solid var(--bg-second);
+                font-size: 0.8rem;
+                .column_name{
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: center;
+                    color: var(--text-second);
+                    padding-left: 1rem;
+                }
+                .column_name_first{
+                    display: flex;
+                    align-items: center;
+                    color: var(--text-second);
+                    gap: 20px;
+                }
+            }
+        }
+        // PAGINATION ===
+        .pagination{
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            color: var(--text-second);
-            gap: 20px;
+            padding: 1rem 0;
+            .pagination_diapason{
+                flex: 1;
+                color: var(--text-second);
+            }
+            .page_switcher{
+                display: flex;
+                gap: 10px;
+                .pagination_btn{
+                    padding: 7px 10px;
+                    border-radius: 5px;
+                    color: var(--text-second);
+                    background-color: var(--bg-second);
+                    font-weight: 500;
+                }
+                .active_btn{
+                    padding: 7px 10px;
+                    border-radius: 5px;
+                    border: 2px solid var(--bg-second);
+                    background-color: var(--bg-main);
+                    color: var(--text-main);
+                }
+            }
         }
-    }
-}
-// pagination -----------
-.pagination{
 
+    }
 }
+
