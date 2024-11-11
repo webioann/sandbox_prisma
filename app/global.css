@@ -13,6 +13,26 @@
     --red: #F475B7;
     --yellow: #F9CC1A;
     
+    .light{
+        /* backgroun colors */
+        --bg-main: #ffffff;
+        --bg-second: #f4f4f4;
+        --bg-dark: #d6d6d6;
+        --bg-contrast: #2962e7;
+        /* text colors */
+        --text-main: #060606;
+        --text-second: #8e8e8e;
+    }
+    .dark{
+        /* backgroun colors */
+        --bg-main: #000000;
+        --bg-second: #f4f4f4;
+        --bg-dark: #d6d6d6;
+        --bg-contrast: #2962e7;
+        /* text colors */
+        --text-main: #ffffff;
+        --text-second: #8e8e8e;
+    }
 
     --xxs: 320px;
     --xs: 425px;
