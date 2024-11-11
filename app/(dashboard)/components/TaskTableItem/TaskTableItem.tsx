@@ -5,7 +5,7 @@ import styles from './task-table-item.module.scss'
 import BadgeWithSingleSymbol from '../../../../components/BadgeWithSingleSymbol/BadgeWithSingleSymbol'
 import BadgeForStatusColored from '../BadgeForStatusColored/BadgeForStatusColored'
 import DueDateHighlighter from '../DueDateHighlighter/DueDateHighlighter'
-import { PiArrowsDownUp } from "react-icons/pi"
+
 import type { IProjectType, ITaskType } from '../../../../types/tasks.types'
 
 type props = {

@@ -5,14 +5,14 @@
     border-bottom-style: dashed;
     padding-top: 16px;
     padding-bottom: 16px;
-    .workspaces-header{
+    .workspaces_header{
         display: flex;
         padding-bottom: 16px;
-        .header-title{
+        .header_title{
             flex: 1;
         }
     }
-    .workspaces-list{
+    .workspaces_list{
         display: grid;
         gap: 12px;
     }

@@ -6,7 +6,7 @@ import Navigation from "@/app/(dashboard)/components/Navigation/Navigation"
 import ContainerFluid from "@/components/Containers/ContainerFluid"
 import ContainerMain from "@/components/Containers/ContainerMain"
 import TopHeader from "@/components/TopHeader/TopHeader"
-import ProjectsLinkList from "@/app/(dashboard)/components/ProjectsList/ProjectsList"
+import ProjectsList from "@/app/(dashboard)/components/ProjectsList/ProjectsList"
 
 export const metadata: Metadata = {
   title: "dashboard",
@@ -24,7 +24,7 @@ export default async function Dashboard_Layout({ children }: Readonly<{children:
           <AppLogo/>
           <WorkspacesList/>
           <Navigation/>
-          <ProjectsLinkList/>
+          <ProjectsList/>
         </SidebarWrapper>
         <ContainerMain>
           <TopHeader/> 

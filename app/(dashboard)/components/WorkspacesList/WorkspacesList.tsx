@@ -1,23 +1,26 @@
 import React from 'react'
-import WorkspaceLink from "../WorkspaceLink/WorkspaceLink"
+import LinkToProjectWorkspace from '../LinkToProjectWorkspace/LinkToProjectWorkspace';
 import { ProjectsData } from '../../../../MOCH_DATA'
 import { AiFillPlusCircle } from "react-icons/ai";
-import './workspaces-list.scss'
+import styles from'./workspaces-list.module.scss'
 
 function WorkspacesList() {
 
-    // const data = [{ id: 1, name: 'Superb Corp'}, { id: 2, name: 'Acme Comp'}]
-    
     return (
-        <section className="workspaces">
+        <section className={styles.workspaces}>
             <div>
-                <header className='workspaces-header'>
-                    <p className="header-title">WORKSPACES</p>
+                <header className={styles.workspaces_header}>
+                    <p className={styles.header_title}>WORKSPACES</p>
                     <AiFillPlusCircle color='#b5b5b5' size={20}/>
                 </header>
-                <ul className='workspaces-list'>
+                <ul className={styles.workspaces_list}>
                     {ProjectsData.map((item) => 
-                        <WorkspaceLink workspace_name={item.project_name} key={item.project_id}/>)
+                        <LinkToProjectWorkspace 
+                            project_id={item.project_id}
+                            project_name={item.project_name} 
+                            ui='dark_block'
+                            key={item.project_id}/>
+                        )
                     }
                 </ul>
             </div>
