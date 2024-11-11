@@ -1,4 +1,4 @@
-import SignInForm from '../../../components/SigninForm/SignInForm'
+import SignInForm from '../components/SigninForm/SignInForm'
 import './register.scss'
 
 function SignUpPage() {

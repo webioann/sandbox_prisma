@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Sidebar from "@/components/Sidebar/Sidebar"
+import SidebarWrapper from "@/app/(dashboard)/components/SidebarWrapper/Sidebar"
 import WorkspacesList from '../../components/WorkspacesList/WorkspacesList'
-import AppLogo from "@/components/AppLogo/AppLogo"
-import Navigation from "@/components/Navigation/Navigation"
+import AppLogo from "@/app/(dashboard)/components/AppLogo/AppLogo"
+import Navigation from "@/app/(dashboard)/components/Navigation/Navigation"
 import ContainerFluid from "@/components/Containers/ContainerFluid"
 import ContainerMain from "@/components/Containers/ContainerMain"
 import TopHeader from "@/components/TopHeader/TopHeader"
@@ -20,12 +20,12 @@ export default async function Dashboard_Layout({ children }: Readonly<{children:
 
     return (
       <ContainerFluid width={1400}>
-        <Sidebar>
+        <SidebarWrapper>
           <AppLogo/>
           <WorkspacesList/>
           <Navigation/>
           <ProjectsLinkList/>
-        </Sidebar>
+        </SidebarWrapper>
         <ContainerMain>
           <TopHeader/> 
           {children}

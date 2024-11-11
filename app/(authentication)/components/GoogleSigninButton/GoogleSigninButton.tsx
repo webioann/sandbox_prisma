@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-import { signIn } from '../../auth'
+import { signIn } from '../../../../auth'
 import './google-button.scss'
 import { useRouter } from 'next/navigation';
 

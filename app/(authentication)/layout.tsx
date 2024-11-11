@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import Container from "@/components/Containers/ContainerFluid";
+import ContainerFluid from "@/components/Containers/ContainerFluid";
 
 export const metadata: Metadata = {
     title: "authenication",
@@ -15,9 +15,9 @@ export default  function Authentication_Layout({children}:
     { children: React.ReactNode}){
     return (
         <main style={styles}>
-            <Container width={1024}>
+            <ContainerFluid width={1024}>
                 {children}
-            </Container>
+            </ContainerFluid>
         </main>
     );
 }

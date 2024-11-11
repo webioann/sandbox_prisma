@@ -1,8 +1,8 @@
 "use server";
-import TotalResult from '@/components/TotalResult/TotalResult'
-import TaskDetailsViewLink from '@/components/TaskDetailsViewLink/TaskDetailsViewLink'
-import PersonBoard from '@/components/PersonBoard/PersonBoard'
-import ProjectBoard from '@/components/ProjectBoard/ProjectBoard'
+import TotalResult from '@/app/(dashboard)/components/TotalResult/TotalResult'
+import TaskDetailsViewLink from '@/app/(dashboard)/components/TaskDetailsViewLink/TaskDetailsViewLink'
+import PersonBoard from '../components/PersonBoard/PersonBoard'
+import ProjectBoard from '@/app/(dashboard)/components/ProjectBoard/ProjectBoard'
 import { FaPlus } from "react-icons/fa"
 import { LuSettings } from "react-icons/lu"
 import styles from './home.module.scss'

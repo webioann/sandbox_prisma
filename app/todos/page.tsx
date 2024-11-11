@@ -1,5 +1,5 @@
-import Todo from "../../components/Todos/Todo"
-import AddTodoInput from "../../components/Todos/AddTodoInput";
+import Todo from "./Todos/Todo"
+import AddTodoInput from "./Todos/AddTodoInput";
 import type { TodoType } from "@/types/todo.types";
 import './todos.scss'
 import Link from "next/link";

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react'
 import { MdOutlineCheckBox, MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
-import { updateTodoIsComplited } from '../../actions/updateTodoIsComplited'; 
+import { updateTodoIsComplited } from '../../../actions/updateTodoIsComplited'; 
 import type { TodoType } from '@/types/todo.types';
 import './todo.scss'
 

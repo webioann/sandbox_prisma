@@ -1,5 +1,5 @@
 import React from 'react'
-import BadgeWithSingleSymbol from '../BadgeWithSingleSymbol/BadgeWithSingleSymbol'
+import BadgeWithSingleSymbol from '@/components/BadgeWithSingleSymbol/BadgeWithSingleSymbol'
 import styles from './person-board.module.scss'
 
 function PersonBoard() {

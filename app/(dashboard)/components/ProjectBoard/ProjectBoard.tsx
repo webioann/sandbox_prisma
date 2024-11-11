@@ -1,5 +1,5 @@
 import React from 'react'
-import BadgeWithSingleSymbol from '../BadgeWithSingleSymbol/BadgeWithSingleSymbol'
+import BadgeWithSingleSymbol from '../../../../components/BadgeWithSingleSymbol/BadgeWithSingleSymbol'
 import styles from './project-board.module.scss'
 
 function ProjectBoard() {
