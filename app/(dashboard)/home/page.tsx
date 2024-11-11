@@ -1,4 +1,4 @@
-import React from 'react'
+"use server";
 import TotalResult from '@/components/TotalResult/TotalResult'
 import TaskDetailsViewLink from '@/components/TaskDetailsViewLink/TaskDetailsViewLink'
 import PersonBoard from '@/components/PersonBoard/PersonBoard'
@@ -7,11 +7,12 @@ import { FaPlus } from "react-icons/fa"
 import { LuSettings } from "react-icons/lu"
 import styles from './home.module.scss'
 
-import BadgeWithSingleSymbol from '@/components/BadgeWithSingleSymbol/BadgeWithSingleSymbol'
-
-function HomePage() {
+const HomePage = async() => {
     let tasks = 14
     let projects = 2
+    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    const users = await response.json();
+    // console.log(users);
     return (
         <div className={styles.home_page}>
             {/* TOTAL RESULTS ROW */}
@@ -23,7 +24,6 @@ function HomePage() {
                 <TotalResult title='Overdue Tasks' total={0}/>
             </div>
 
-            <BadgeWithSingleSymbol variant='cube_grey' symbol='root'/>
             {/* DASHBOARD */}
             <div className={styles.dashboard_wrapper}>
                 <div className={styles.tasks_viewer}>

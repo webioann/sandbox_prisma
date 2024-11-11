@@ -1,6 +1,7 @@
 .home_page{
     width: 100%;
     padding: 16px;
+    border: 1px solid red; 
     .total_results{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
