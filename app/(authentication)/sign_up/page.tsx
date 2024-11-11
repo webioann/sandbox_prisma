@@ -1,7 +1,7 @@
 import SignInForm from '../../../components/SigninForm/SignInForm'
 import './register.scss'
 
-function RegisterPage() {
+function SignUpPage() {
     return (
         <div className='register-page'>
             <SignInForm/>
@@ -9,4 +9,4 @@ function RegisterPage() {
     )
 }
 
-export default RegisterPage
+export default SignUpPage;

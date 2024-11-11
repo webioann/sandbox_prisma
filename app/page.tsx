@@ -2,7 +2,7 @@
 import { redirect } from 'next/navigation'
 
 async function InitialRootPage() {
-    redirect(`/home`) // Navigate to the Browse page
+    redirect(`/sign_in`) // Navigate to the Browse page
 }
 
 export default InitialRootPage;
