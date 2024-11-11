@@ -2,9 +2,9 @@ import React from 'react'
 import Link from 'next/link';
 import { AiFillPlusCircle } from "react-icons/ai";
 import BadgeWithSingleSymbol from '../../../../components/BadgeWithSingleSymbol/BadgeWithSingleSymbol';
-import './projects-link-list.scss'
+import './projects-list.scss'
 
-function ProjectsLinkList() {
+function ProjectsList() {
 
     const data = [
         { id: 1, project: 'Mobile App Development'},
@@ -47,4 +47,4 @@ function ProjectsLinkList() {
     )
 }
 
-export default ProjectsLinkList
+export default ProjectsList;

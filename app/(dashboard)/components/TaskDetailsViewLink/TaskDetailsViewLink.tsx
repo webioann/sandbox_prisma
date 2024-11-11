@@ -5,7 +5,7 @@ import styles from './task-details-link.module.scss'
 
 function TaskDetailsViewLink() {
     return (
-        <Link href={''} className={styles.task_view_link}>
+        <Link href={'/home'} className={styles.task_view_link}>
             <h4 className={styles.task_discription}>hello</h4>
             <div className={styles.task_name_and_time}>
                 <p>Mobile App Development</p>

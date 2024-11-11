@@ -6,7 +6,7 @@ import Navigation from "@/app/(dashboard)/components/Navigation/Navigation"
 import ContainerFluid from "@/components/Containers/ContainerFluid"
 import ContainerMain from "@/components/Containers/ContainerMain"
 import TopHeader from "@/components/TopHeader/TopHeader"
-import ProjectsLinkList from "@/app/(dashboard)/components/ProjectsLinkList/ProjectsLinkList"
+import ProjectsLinkList from "@/app/(dashboard)/components/ProjectsList/ProjectsList"
 
 export const metadata: Metadata = {
   title: "dashboard",

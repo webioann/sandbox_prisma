@@ -17,7 +17,7 @@ function WorkspacesList() {
                 </header>
                 <ul className='workspaces-list'>
                     {ProjectsData.map((item) => 
-                        <WorkspaceLink workspace_name={item.project_name}/>)
+                        <WorkspaceLink workspace_name={item.project_name} key={item.project_id}/>)
                     }
                 </ul>
             </div>

@@ -7,7 +7,7 @@ function LinkToProject() {
     let name = 'Mobile App Development'
     return (
         <Link href={`/projects/${'this_project_ID'}`}>
-            <div className={styles.project_board}>
+            <div className={styles.project_link}>
                 <BadgeWithSingleSymbol variant='cube_big' symbol={name}/>
             <p className={styles.project_name}>{name}</p>
             </div>
