@@ -1,11 +1,10 @@
 .circle{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background-color: var(--bg-dark);
     color: var(--text-second);
-    font-size: 0.7rem;
-    font-weight: 400;
+    font-size: var(--little);
     display: flex;
     justify-content: center;
     align-items: center;

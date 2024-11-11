@@ -14,7 +14,7 @@
             .filter{
                 border: 1px solid var(--bg-second);
                 border-radius: 5px;
-                padding: 5px 10px;
+                padding: 5px 12px;
                 display: flex;
                 align-items: center;
                 gap: 5px;
@@ -32,12 +32,12 @@
                 display: grid;
                 gap: 5px;
                 grid-template-columns: 6.5fr 6.5fr 4fr 4fr 4fr;
-                padding: 0.5rem;
+                padding: 8px;
                 border-top: 1px solid var(--bg-second);
-                font-size: 0.8rem;
+                font-size: var(--small);
                 .column_name{
                     display: flex;
-                    gap: 0.5rem;
+                    gap: 8px;
                     align-items: center;
                     color: var(--text-second);
                     padding-left: 1rem;
@@ -64,14 +64,14 @@
                 display: flex;
                 gap: 10px;
                 .pagination_btn{
-                    padding: 7px 10px;
+                    padding: 8px 12px;
                     border-radius: 5px;
                     color: var(--text-second);
                     background-color: var(--bg-second);
                     font-weight: 500;
                 }
                 .active_btn{
-                    padding: 7px 10px;
+                    padding: 8px 12px;
                     border-radius: 5px;
                     border: 2px solid var(--bg-second);
                     background-color: var(--bg-main);

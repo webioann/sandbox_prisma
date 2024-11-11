@@ -1,17 +1,17 @@
 nav{
     display: grid;
-    gap: 10px;
+    gap: 8px;
     padding: 1rem 0;
     .nav-link{
         color: var(--text-second);
         text-decoration: none;
         display: flex;
-        padding: 0.5rem;
+        padding: 8px;
         border-radius: 5px;
         cursor: pointer;
         .link-name{
             font-weight: 400;
-            padding-left: 0.5rem;
+            padding-left: 8px;
         }
     }
     .active{

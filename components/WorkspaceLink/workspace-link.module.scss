@@ -1,14 +1,13 @@
-.workspace-link{
+.workspace_link{
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--bg-dark);
-    padding: 3px;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
-.workspace-name{
+.workspace_name{
     flex: 1;
-    padding: 0 0.5rem;
-    font-weight: 400;
+    padding: 0 8px;
 }

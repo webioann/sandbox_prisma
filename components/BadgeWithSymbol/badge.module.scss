@@ -1,21 +1,20 @@
-.big-cube{
-    width: 2rem;
-    height: 2rem;
+.big_cube{
+    width: 30px;
+    height: 30px;
     border-radius: 15%;
     background-color: var(--bg-contrast);
     color: var(--bg-main);
-    font-size: 1rem;
     font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .cube{
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 20px;
+    height: 20px;
     border-radius: 15%;
     background-color: var(--bg-contrast);
-    font-size: 0.65rem;
+    font-size: var(--little);
     color: var(--bg-main);
     font-weight: 400;
     display: flex;
@@ -23,12 +22,11 @@
     align-items: center;
 }
 .circle{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: var(--bg-dark);
     color: var(--bg-main);
-    font-size: 1rem;
     font-weight: 600;
     display: flex;
     justify-content: center;

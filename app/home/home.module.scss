@@ -1,10 +1,10 @@
-.page{
+.home_page{
     width: 100%;
-    padding: 1rem;
+    padding: 16px;
     .total_results{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 10px;
+        gap: 12px;
         border: 1px solid var(--bg-second);
         border-radius: 5px;
     }
@@ -29,29 +29,29 @@
         display: grid;
         grid-template-columns: 1fr;
         // min-height: 100%;
-        gap: 1rem;
-        margin-top: 1rem;
+        gap: 16px;
+        margin-top: 16px;
         // assigned tasks section -------------------
         .tasks_viewer{
-            padding: 0 10px;
+            padding: 0 12px;
             display: grid;
             align-self: start;
             .assigned_section{
-                padding: 1rem;
+                padding: 16px;
                 background-color: var(--bg-second);
                 border-radius: 8px;
                 .assigned_header{
                     display: flex;
                     align-items: center;
-                    padding-bottom: 10px;
+                    padding-bottom: 12px;
                     border-bottom: 2px dotted var(--bg-dark);
                     .title{
                         flex: 1;
                         font-weight: 600;
                     }
                     .plus_button{
-                        width: 25px;
-                        height: 25px;
+                        width: 24px;
+                        height: 24px;
                         border-radius: 15%;
                         background-color: var(--bg-dark);
                         display: flex;
@@ -62,15 +62,15 @@
                 .tasks_viewer_list{
                     // border-left: 2px dotted var(--bg-second);
                     display: grid;
-                    gap: 10px;
-                    padding: 1rem 0;
+                    gap: 12px;
+                    padding: 16px 0;
                 }
                 .show_all_button{
                     width: 100%;
                     background-color: var(--bg-dark);
                     border-radius: 8px;
                     text-align: center;
-                    padding: 10px;
+                    padding: 12px;
                     .inner_text{
                         font-weight: 600;
                         color: var(--text-second);
@@ -80,22 +80,22 @@
             }
             // people section -------------------
             .people_section{
-                margin-top: 1rem;
+                margin-top: 16px;
                 width: 100%;
                 border: 1px solid var(--bg-second);
                 border-radius: 8px;
-                padding: 1rem;
+                padding: 16px;
                 .people_header{
                     display: flex;
-                    padding-bottom: 10px; 
+                    padding-bottom: 12px; 
                     border-bottom: 2px dotted var(--bg-dark);
                     .title{
                         flex: 1;
                         font-weight: 600;
                     }
                     .settings_button{
-                        width: 25px;
-                        height: 25px;
+                        width: 24px;
+                        height: 24px;
                         border: 1px solid var(--bg-second);
                         border-radius: 15%;
                         display: flex;
@@ -106,7 +106,7 @@
                 .people_list{
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
-                    gap: 10px;
+                    gap: 12px;
                     margin-top: 1rem;
                 }
             }
@@ -122,15 +122,15 @@
             .projects_header{
                 display: flex;
                 align-items: center;
-                padding-bottom: 10px;
+                padding-bottom: 12px;
                 border-bottom: 2px dotted var(--bg-dark);
                 .title{
                     flex: 1;
                     font-weight: 600;
                 }
                 .plus_button{
-                    width: 25px;
-                    height: 25px;
+                    width: 24px;
+                    height: 24px;
                     border-radius: 15%;
                     background-color: var(--bg-dark);
                     display: flex;
@@ -141,7 +141,7 @@
             .projects_list{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 10px;
+                gap: 12px;
             }
         }
     }

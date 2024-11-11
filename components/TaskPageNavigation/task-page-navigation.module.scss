@@ -1,18 +1,18 @@
 .links_header{
     display: flex;
     align-items: center;
-    padding: 1rem 0;
+    padding: 16px 0;
     border-bottom: 2px dotted var(--bg-dark);
     .page_links_stack{
         display: flex;
         flex: 1;
         .task_page_link{
             background-color: var(--bg-second);
-            padding: 5px 10px;
+            padding: 5px 12px;
             display: flex;
             align-items: center;
             border-radius: 5px;
-            margin-right: 10px;
+            margin-right: 12px;
             color: var(--text-second);
         }
         .active{
@@ -22,7 +22,7 @@
     }
     .create_button{
         background-color: var(--bg-contrast);
-        padding: 5px 10px;
+        padding: 5px 12px;
         display: flex;
         align-items: center;
         border-radius: 5px;

@@ -11,8 +11,8 @@ function HomePage() {
     let tasks = 14
     let projects = 2
     return (
-        <div className={styles.page}>
-            {/* ======================= */}
+        <div className={styles.home_page}>
+            {/* TOTAL RESULTS ROW */}
             <div className={styles.total_results}>
                 <TotalResult title='Total Projects' total={10}/>
                 <TotalResult title='Total Tasks' total={14}/>
@@ -20,34 +20,27 @@ function HomePage() {
                 <TotalResult title='Completed Task' total={2}/>
                 <TotalResult title='Overdue Tasks' total={0}/>
             </div>
-
+            {/* DASHBOARD */}
             <div className={styles.dashboard_wrapper}>
-
                 <div className={styles.tasks_viewer}>
                     {/* assigned tasks block */}
                     <section className={styles.assigned_section}>
-                        {/* ========================= */}
                         <div className={styles.assigned_header}>
                             <h4 className={styles.title}>Assigned Tasks ({tasks})</h4>
                             <div className={styles.plus_button}>
                                 <FaPlus size={12} color='grey'/>
                             </div>
                         </div>
-                        {/* =========================== */}
                         <ul className={styles.tasks_viewer_list}>
                             <TaskDetailsViewLink/>
                             <TaskDetailsViewLink/>
                             <TaskDetailsViewLink/>
                             <TaskDetailsViewLink/>
                         </ul>
-                        {/* ============================ */}
                         <button className={styles.show_all_button}>
                             <p className={styles.inner_text}>Show All</p>
                         </button>
                     </section>
-
-
-                    {/* people block */}
                     <section className={styles.people_section}>
                         <div className={styles.people_header}>
                             <h4 className={styles.title}>People ({2})</h4>
@@ -61,13 +54,7 @@ function HomePage() {
                             <PersonBoard/>
                         </ul>
                     </section>
-
-
-
                 </div>
-
-
-
                 <section className={styles.projects_viewer}>
                     <div className={styles.projects_header}>
                         <h4 className={styles.title}>Projects ({projects})</h4>
@@ -80,8 +67,6 @@ function HomePage() {
                         <ProjectBoard/>
                     </ul>
                 </section>
-
-
             </div>
         </div>
     )

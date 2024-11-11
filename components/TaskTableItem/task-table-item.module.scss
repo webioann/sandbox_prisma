@@ -2,34 +2,30 @@
     display: grid;
     gap: 5px;
     grid-template-columns: 6.5fr 6.5fr 4fr 4fr 4fr;
-    padding: 0.5rem;
+    padding: 8px;
     border-top: 1px solid var(--bg-second);
-    font-size: 0.8rem;
+    font-size: var(--small);
     
     .task_name{
         display: flex;
         align-items: center;
-        // border: 1px solid red;
         .task_dicription{
-            margin-left: 0.5rem;
+            margin-left: 8px;
             color: var(--text-second);
         }
     }
-
     // project cell -----------
     .project_cell{
         display: flex;
         align-items: center;
-        // border: 1px solid red;
         .project_name{
-            margin-left: 0.5rem;
+            margin-left: 8px;
         }
     }
     // asigned person ----------
     .assigned_person{
         display: flex;
         align-items: center;
-        // border: 1px solid red;
         .person_badge{
             width: 24px;
             height: 24px;
@@ -40,7 +36,7 @@
             justify-content: center;
         }
         .person_name{
-            margin-left: 0.5rem;
+            margin-left: 8px;
         }
     }
     // due date ----------------

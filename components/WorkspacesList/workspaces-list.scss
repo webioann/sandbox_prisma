@@ -3,17 +3,17 @@
     border-color: var(--bg-dark);
     border-top-style: dashed;
     border-bottom-style: dashed;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 16px;
+    padding-bottom: 16px;
     .workspaces-header{
         display: flex;
-        padding-bottom: 1rem;
+        padding-bottom: 16px;
         .header-title{
             flex: 1;
         }
     }
     .workspaces-list{
         display: grid;
-        gap: 10px;
+        gap: 12px;
     }
 }

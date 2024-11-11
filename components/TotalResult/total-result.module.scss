@@ -1,17 +1,17 @@
 .result_box{
-    padding: 15px 12px;
+    padding: 16px 12px;
     border-right: 1px dashed var(--bg-second);
     .top_board{
         display: flex;
         align-items: center;
         gap: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         .title{
             color: var(--text-second);
         }
         .result{ 
             color: var(--text-second);
-            font-size: 0.8rem;
+            font-size: var(--small);
         }
     }
     .main_result{
