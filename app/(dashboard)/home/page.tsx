@@ -1,6 +1,6 @@
 "use server";
 import TotalResult from '@/app/(dashboard)/components/TotalResult/TotalResult'
-import TaskDetailsViewLink from '@/app/(dashboard)/my_tasks/components/TaskDetailsViewLink/TaskDetailsViewLink'
+import TaskDetailsViewLink from '@/app/(dashboard)/components/TaskDetailsViewLink/TaskDetailsViewLink'
 import PersonWidget from '../components/PersonWidget/PersonWidget'
 import LinkToProjectWorkspace  from '@/app/(dashboard)/components/LinkToProjectWorkspace/LinkToProjectWorkspace'
 import { FaPlus } from "react-icons/fa"
@@ -8,6 +8,7 @@ import { LuSettings } from "react-icons/lu"
 import styles from './home.module.scss'
 
 const HomePage = async() => {
+
     let tasks = 14
     let projects = 2
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
