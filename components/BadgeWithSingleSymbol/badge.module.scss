@@ -1,4 +1,4 @@
-.big_cube{
+.cube_big{
     width: 30px;
     height: 30px;
     border-radius: 15%;
@@ -16,14 +16,36 @@
     background-color: var(--bg-contrast);
     font-size: var(--little);
     color: var(--bg-main);
-    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.circle{
+.cube_grey{
     width: 30px;
     height: 30px;
+    border-radius: 15%;
+    background-color: var(--bg-second);
+    font-size: var(--little);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--bg-dark);
+    color: var(--bg-main);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle_big{
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: var(--bg-dark);
     color: var(--bg-main);

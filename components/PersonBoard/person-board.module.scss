@@ -5,16 +5,9 @@
     border: 1px solid var(--bg-second);
     border-radius: 5px;
     padding: 12px;
-    .person_icon{
-        width: 40px;
-        height: 40px;
-        margin: 0 auto;
-        border-radius: 50%;
-        background-color: var(--bg-dark);
-        color: var(--text-second);
+    .badge{
         display: flex;
         justify-content: center;
-        align-items: center;
     }
     .person_name{
         text-align: center;

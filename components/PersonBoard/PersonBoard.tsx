@@ -1,15 +1,13 @@
 import React from 'react'
+import BadgeWithSingleSymbol from '../BadgeWithSingleSymbol/BadgeWithSingleSymbol'
 import styles from './person-board.module.scss'
 
 function PersonBoard() {
     
-    let name = 'a'
-    let protectedSymbol = name === '' ? 'A' : name
-
     return (
         <div className={styles.person_cell}>
-            <div className={styles.person_icon}>
-                {protectedSymbol[0].toUpperCase()}
+            <div className={styles.badge}>
+                <BadgeWithSingleSymbol variant='circle_big' symbol='antonio'/>
             </div>
             <h3 className={styles.person_name}>
                 Antonio

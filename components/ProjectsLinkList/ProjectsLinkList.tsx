@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link';
 import { AiFillPlusCircle } from "react-icons/ai";
+import BadgeWithSingleSymbol from '../BadgeWithSingleSymbol/BadgeWithSingleSymbol';
 import './projects-link-list.scss'
-import BadgeWithSymbol from '../BadgeWithSymbol/BadgeWithSymbol';
 
 function ProjectsLinkList() {
 
@@ -34,7 +34,7 @@ function ProjectsLinkList() {
                 <ul className='projects-list'>
                     {data.map((item) => 
                         <Link href={createProjectIdPath(item.project)} className='project-link'>
-                            <BadgeWithSymbol variant='cube' symbol={item.project}/>
+                            <BadgeWithSingleSymbol variant='cube' symbol={item.project}/>
                             <h4 className='project-name'>
                                 {truncate(item.project)}
                             </h4>

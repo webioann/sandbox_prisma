@@ -3,6 +3,7 @@ import { MdOutlineCheckBox, MdOutlineCheckBoxOutlineBlank } from "react-icons/md
 import { HiDotsVertical } from "react-icons/hi"
 import styles from './task-table-item.module.scss'
 import BadgeWithSymbol from '../BadgeWithSymbol/BadgeWithSymbol'
+import BadgeWithSingleSymbol from '../BadgeWithSingleSymbol/BadgeWithSingleSymbol'
 import BadgeWithSymbolRounded from '../BadgeWithSymbolRounded/BadgeWithSymbolRounded'
 import BadgeForStatusColored from '../BadgeForStatusColored/BadgeForStatusColored'
 import DueDateHighlighter from '../DueDateHighlighter/DueDateHighlighter'
@@ -25,12 +26,12 @@ const  TaskTableItem: React.FC<props> = ({project, task}) => {
             </div>
 
             <div className={styles.project_cell}>
-                <BadgeWithSymbol variant='cube' symbol={project.project_name}/>
+                <BadgeWithSingleSymbol variant='cube' symbol={project.project_name}/>
                 <p className={styles.project_name}>{project.project_name}</p>
             </div>
 
             <div className={styles.assigned_person}>
-                <BadgeWithSymbolRounded symbol={task.assigned_person}/>
+                <BadgeWithSingleSymbol variant='circle' symbol={task.assigned_person}/>
                 <p className={styles.person_name}>{task.assigned_person}</p>
             </div>
             <DueDateHighlighter dueDate={task.due_date}/>

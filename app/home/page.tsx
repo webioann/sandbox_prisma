@@ -7,6 +7,8 @@ import { FaPlus } from "react-icons/fa"
 import { LuSettings } from "react-icons/lu"
 import styles from './home.module.scss'
 
+import BadgeWithSingleSymbol from '@/components/BadgeWithSingleSymbol/BadgeWithSingleSymbol'
+
 function HomePage() {
     let tasks = 14
     let projects = 2
@@ -20,6 +22,8 @@ function HomePage() {
                 <TotalResult title='Completed Task' total={2}/>
                 <TotalResult title='Overdue Tasks' total={0}/>
             </div>
+
+            <BadgeWithSingleSymbol variant='cube_grey' symbol='root'/>
             {/* DASHBOARD */}
             <div className={styles.dashboard_wrapper}>
                 <div className={styles.tasks_viewer}>
