@@ -1,5 +1,5 @@
 import React from 'react'
-import BadgeWithSingleSymbol from '../BadgeWithSingleSymbol/BadgeWithSingleSymbol';
+import BadgeWithSingleSymbol from '../../../../components/BadgeWithSingleSymbol/BadgeWithSingleSymbol';
 import { PiArrowsDownUp } from "react-icons/pi";
 import styles from './workspace-link.module.scss'
 

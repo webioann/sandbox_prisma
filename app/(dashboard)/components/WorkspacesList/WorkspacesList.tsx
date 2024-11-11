@@ -1,6 +1,6 @@
 import React from 'react'
-import WorkspaceLink from "@/components/WorkspaceLink/WorkspaceLink"
-import { ProjectsData } from '../../MOCH_DATA'
+import WorkspaceLink from "../WorkspaceLink/WorkspaceLink"
+import { ProjectsData } from '../../../../MOCH_DATA'
 import { AiFillPlusCircle } from "react-icons/ai";
 import './workspaces-list.scss'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import { AiFillPlusCircle } from "react-icons/ai";
-import BadgeWithSingleSymbol from '../BadgeWithSingleSymbol/BadgeWithSingleSymbol';
+import BadgeWithSingleSymbol from '../../../../components/BadgeWithSingleSymbol/BadgeWithSingleSymbol';
 import './projects-link-list.scss'
 
 function ProjectsLinkList() {
@@ -14,7 +14,7 @@ function ProjectsLinkList() {
     const truncate = (name: string) => {
         const maxLength = 17
         if(name.length <= maxLength) return name
-        if(name.length > maxLength) return name.substring(0, maxLength) + "..."
+        if(name.length > maxLength) return name.substring(0, maxLength -3) + "..."
     }
     // function create "humanity" path for project id URL ==========
     const createProjectIdPath = (name: string) => {
