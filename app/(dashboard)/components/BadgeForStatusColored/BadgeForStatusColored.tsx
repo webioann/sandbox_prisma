@@ -1,5 +1,5 @@
 import React from 'react'
-import { taskStatusesList } from '../../types/tasks.types'
+import { taskStatusesList } from '../../../../types/tasks.types'
 import styles from './colored-badge.module.scss'
 
 type badgeProps = { status: string }
