@@ -1,6 +1,6 @@
 import React from 'react'
-import TaskTableItem from '@/app/(dashboard)/components/TaskTableItem/TaskTableItem'
-import TaskPageNavigation from '@/app/(dashboard)/components/TaskPageNavigation/TaskPageNavigation'
+import TaskTableItem from '../components/TaskTableItem/TaskTableItem'
+import TaskPageNavigation from '@/app/(dashboard)/my_tasks/components/TaskPageNavigation/TaskPageNavigation'
 import { FiCalendar } from "react-icons/fi"
 import { LuListChecks } from "react-icons/lu"
 import { GoPerson } from "react-icons/go"

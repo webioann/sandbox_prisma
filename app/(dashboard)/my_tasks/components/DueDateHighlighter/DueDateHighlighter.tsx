@@ -1,5 +1,5 @@
 import React from 'react'
-import type { dueDateStatusColors, createAndHighlightDueDateType } from '../../../../types/tasks.types'
+import type { dueDateStatusColors, createAndHighlightDueDateType } from '../../../../../types/tasks.types'
 
 import styles from './date-highlighter.module.scss'
 

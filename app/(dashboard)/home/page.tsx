@@ -1,7 +1,7 @@
 "use server";
 import TotalResult from '@/app/(dashboard)/components/TotalResult/TotalResult'
-import TaskDetailsViewLink from '@/app/(dashboard)/components/TaskDetailsViewLink/TaskDetailsViewLink'
-import PersonBoard from '../components/PersonBoard/PersonBoard'
+import TaskDetailsViewLink from '@/app/(dashboard)/my_tasks/components/TaskDetailsViewLink/TaskDetailsViewLink'
+import PersonWidget from '../components/PersonWidget/PersonWidget'
 import LinkToProjectWorkspace  from '@/app/(dashboard)/components/LinkToProjectWorkspace/LinkToProjectWorkspace'
 import { FaPlus } from "react-icons/fa"
 import { LuSettings } from "react-icons/lu"
@@ -53,9 +53,9 @@ const HomePage = async() => {
                             </div>
                         </div>
                         <ul className={styles.people_list}>
-                            <PersonBoard/>
-                            <PersonBoard/>
-                            <PersonBoard/>
+                            <PersonWidget/>
+                            <PersonWidget/>
+                            <PersonWidget/>
                         </ul>
                     </section>
                 </div>

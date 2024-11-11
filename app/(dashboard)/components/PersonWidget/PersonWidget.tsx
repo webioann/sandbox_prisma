@@ -1,11 +1,11 @@
 import React from 'react'
 import BadgeWithSingleSymbol from '@/components/BadgeWithSingleSymbol/BadgeWithSingleSymbol'
-import styles from './person-board.module.scss'
+import styles from './person-widget.module.scss'
 
-function PersonBoard() {
+function PersonWidget() {
     
     return (
-        <div className={styles.person_cell}>
+        <div className={styles.person_widget}>
             <div className={styles.badge}>
                 <BadgeWithSingleSymbol variant='circle_big' symbol='antonio'/>
             </div>
@@ -17,4 +17,4 @@ function PersonBoard() {
     )
 }
 
-export default PersonBoard;
+export default PersonWidget;

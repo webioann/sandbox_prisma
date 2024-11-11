@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiFillPlusCircle } from "react-icons/ai"
 import LinkToProjectWorkspace from '../LinkToProjectWorkspace/LinkToProjectWorkspace';
-import './projects-list.scss'
+import styles from './projects-list.module.scss'
 
 function ProjectsList() {
 
@@ -11,13 +11,13 @@ function ProjectsList() {
     ]
 
     return (
-        <section className="projects">
+        <section className={styles.projects_list_block}>
             <div>
-                <header className='projects-header'>
-                    <p className="projects-title">PROJECTS</p>
+                <header className={styles.projects_list_header}>
+                    <p className={styles.projects_list_title}>PROJECTS</p>
                     <AiFillPlusCircle color='#b5b5b5' size={20}/>
                 </header>
-                <ul className='projects-list'>
+                <ul className={styles.projects_list}>
                     {data.map((item) => <LinkToProjectWorkspace
                         project_id={item.id}
                         project_name={item.project}

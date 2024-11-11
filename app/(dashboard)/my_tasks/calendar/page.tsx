@@ -1,5 +1,5 @@
 import React from 'react'
-import TaskPageNavigation from '@/app/(dashboard)/components/TaskPageNavigation/TaskPageNavigation'
+import TaskPageNavigation from '@/app/(dashboard)/my_tasks/components/TaskPageNavigation/TaskPageNavigation'
 
 import styles from './calendar.module.scss'
 

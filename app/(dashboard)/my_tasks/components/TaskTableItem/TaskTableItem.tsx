@@ -2,11 +2,11 @@ import React from 'react'
 import { MdOutlineCheckBox, MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
 import { HiDotsVertical } from "react-icons/hi"
 import styles from './task-table-item.module.scss'
-import BadgeWithSingleSymbol from '../../../../components/BadgeWithSingleSymbol/BadgeWithSingleSymbol'
+import BadgeWithSingleSymbol from '../../../../../components/BadgeWithSingleSymbol/BadgeWithSingleSymbol'
 import BadgeForStatusColored from '../BadgeForStatusColored/BadgeForStatusColored'
 import DueDateHighlighter from '../DueDateHighlighter/DueDateHighlighter'
 
-import type { IProjectType, ITaskType } from '../../../../types/tasks.types'
+import type { IProjectType, ITaskType } from '../../../../../types/tasks.types'
 
 type props = {
     project: IProjectType
