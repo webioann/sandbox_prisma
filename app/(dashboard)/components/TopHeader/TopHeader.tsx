@@ -8,13 +8,14 @@ import './top-header.scss'
 
 function TopHeader() {
 
-    // USER CONTEXT
+    // USER CONTEXT ================>
     const user = React.useContext(UserContext)
-    console.log(user);
+    // console.log(user);
 
     const pathName = usePathname()
-    // transformed URL path in header title with big first letters in each word
+    
     const cutFirstPathFromURLAndCapitalize = (url: string) => {
+        // transformed URL path in header title with big first letters in each word
         let withoutFrontSlash = url.slice(1)
         let nextSlashIndex = withoutFrontSlash.indexOf('/')
         let raw = nextSlashIndex === -1 ? withoutFrontSlash : withoutFrontSlash.slice(0, nextSlashIndex)
