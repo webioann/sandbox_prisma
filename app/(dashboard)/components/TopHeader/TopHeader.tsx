@@ -1,10 +1,17 @@
 "use client"
+// import React, { useContext } from 'react'
+import { UserContext } from '../../../../context/UserContextProvider'
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import './top-header.scss'
 
 function TopHeader() {
+
+    // USER CONTEXT
+    const user = React.useContext(UserContext)
+    console.log(user);
+
     const pathName = usePathname()
     // transformed URL path in header title with big first letters in each word
     const cutFirstPathFromURLAndCapitalize = (url: string) => {
@@ -25,7 +32,7 @@ function TopHeader() {
                 <p className='header-description'>Monitor all of your projects and tasks here</p>
             </header>
             <Link href={'/account'} className='account-link'>
-                A
+                { user?.name ? user.name[0].toUpperCase() : user?.email[0].toUpperCase() }
             </Link>
         </div>
     )

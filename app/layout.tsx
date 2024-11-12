@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google"
+import UserContextProvider from "@/context/UserContextProvider";
 import './global.css'
 
 const font = Roboto_Flex({ subsets: ["latin"], weight: ['400', '600', '800'] });
@@ -14,7 +15,9 @@ export default function RootLayout({ children }: Readonly<{children: React.React
   return (
     <html lang="en">
       <body className={font.className}>
-        {children}
+        <UserContextProvider>
+          {children}
+        </UserContextProvider>
       </body>
     </html>
   )
