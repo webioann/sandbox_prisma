@@ -26,13 +26,13 @@ export type createAndHighlightDueDateType =
         criticalPeriod: number
     ) => 
     {
-        dueDateInReadbleFormat: string,
+        dueDateInReadableFormat: string,
         criticalityColor: dueDateStatusColors
     }
 // one single task object type
 export interface ITaskType {
     task_id: string
-    task_discription: string
+    task_description: string
     task_checked: boolean
     assigned_person: string
     status: StatusesType

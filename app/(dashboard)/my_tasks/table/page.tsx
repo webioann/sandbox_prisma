@@ -13,7 +13,7 @@ import styles from './table.module.scss'
 import { TbArrowsUpDown } from "react-icons/tb"
 import { IoIosArrowDown } from "react-icons/io"
 
-import { ProjectsData } from '../../../../MOCH_DATA'
+import { ProjectsData } from '../../../../MOCK_DATA'
 import type { ProjectsDataType } from '../../../../types/tasks.types'
 
 
@@ -55,7 +55,7 @@ export default function TablePage() {
                             <TbArrowsUpDown/>  
                         </div>
                         <div className={styles.column_name}>
-                            <p>Progect</p>
+                            <p>Project</p>
                             <TbArrowsUpDown/>  
                         </div>
                         <div className={styles.column_name}>

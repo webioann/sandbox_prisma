@@ -1,6 +1,6 @@
 import React from 'react'
 import LinkToProjectWorkspace from '../LinkToProjectWorkspace/LinkToProjectWorkspace';
-import { ProjectsData } from '../../../../MOCH_DATA'
+import { ProjectsData } from '../../../../MOCK_DATA'
 import { AiFillPlusCircle } from "react-icons/ai";
 import styles from'./workspaces-list.module.scss'
 

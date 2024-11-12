@@ -9,7 +9,7 @@
     .task_name{
         display: flex;
         align-items: center;
-        .task_dicription{
+        .task_decription{
             margin-left: 8px;
             color: var(--text-second);
         }
@@ -22,7 +22,7 @@
             margin-left: 8px;
         }
     }
-    // asigned person ----------
+    // assigned person ----------
     .assigned_person{
         display: flex;
         align-items: center;
@@ -47,4 +47,4 @@
         justify-content: space-between;
     }
 }
-// && daysByDutDate - criticalPeriodInMiliseconds + dayInMiliseconds < criticalPeriodInMiliseconds
+// && daysByDutDate - criticalPeriodInMilliseconds + dayInMilliseconds < criticalPeriodInMilliseconds

@@ -18,11 +18,11 @@ function DueDateHighlighter({dueDate}: dateHighlighterProps) {
                 "August","September","October","November","December"];
             const oneDay = 86400000;
             // create readable date ---
-            let dueDateInReadbleFormat: string = '';
+            let dueDateInReadableFormat: string = '';
             let dueDateYear = new Date(dueDate).getFullYear()
             let dueDateMonth = new Date(dueDate).getMonth()
             let dueDateDay = new Date(dueDate).getDate()
-            dueDateInReadbleFormat= `${month[dueDateMonth]} ${dueDateDay}th, ${dueDateYear}`
+            dueDateInReadableFormat= `${month[dueDateMonth]} ${dueDateDay}th, ${dueDateYear}`
             // highlight critical period ---
             let criticalityColor: dueDateStatusColors = '#34CB97'
             let daysByDutDate = Math.ceil(( dueDate - currentDate ) / oneDay) 
@@ -30,9 +30,9 @@ function DueDateHighlighter({dueDate}: dateHighlighterProps) {
             if(daysByDutDate < criticalPeriod + 2 && daysByDutDate > 2) criticalityColor = '#F7CE1B'
             if(daysByDutDate <= 2) criticalityColor = '#F57174'
     
-            return { dueDateInReadbleFormat, criticalityColor }
+            return { dueDateInReadableFormat: dueDateInReadableFormat, criticalityColor }
         } 
-        let { dueDateInReadbleFormat, criticalityColor } = createAndHighlightDueDate(dueDate, 3)
+        let { dueDateInReadableFormat: dueDateInReadableFormat, criticalityColor } = createAndHighlightDueDate(dueDate, 3)
         // console.log(dueDateDay);
         // console.log(criticalityColor);
     
@@ -42,7 +42,7 @@ function DueDateHighlighter({dueDate}: dateHighlighterProps) {
                 className={styles.date}
                 style={{color: criticalityColor}}
                 >
-                { dueDateInReadbleFormat }</p>
+                { dueDateInReadableFormat }</p>
         </div>    
     )
 }

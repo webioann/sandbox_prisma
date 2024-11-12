@@ -7,7 +7,7 @@ function ProjectsList() {
 
     const data = [
         { id: 'aefawmmmjm', project: 'Mobile App Development'},
-        { id: 'aefawsddfcc', project: 'Website Redisign'}
+        { id: 'aefawsddfcc', project: 'Website Redesign'}
     ]
 
     return (

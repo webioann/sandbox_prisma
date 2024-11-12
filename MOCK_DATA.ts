@@ -8,7 +8,7 @@ export const ProjectsData: ProjectsDataType =
     project_tasks_list: [
         {
             task_id: 'fgfdddasg',
-            task_discription: 'Conduct usability testing',
+            task_description: 'Conduct usability testing',
             task_checked: false,
             assigned_person: 'John',
             status: 'In Progress',
@@ -17,7 +17,7 @@ export const ProjectsData: ProjectsDataType =
         },
         {
             task_id: 'fgfddsfet',
-            task_discription: 'Impliment offline mode',
+            task_description: 'Impliment offline mode',
             task_checked: false,
             assigned_person: 'Antonio',
             status: 'In Review',
@@ -26,7 +26,7 @@ export const ProjectsData: ProjectsDataType =
         },
         {
             task_id: 'fgfserttb',
-            task_discription: 'Integrate push notification',
+            task_description: 'Integrate push notification',
             task_checked: true,
             assigned_person: 'Dave',
             status: 'Backlog',
@@ -44,7 +44,7 @@ export const ProjectsData: ProjectsDataType =
     project_tasks_list: [
         {
             task_id: 'fgfdddasg',
-            task_discription: 'Develop login screen',
+            task_description: 'Develop login screen',
             task_checked: false,
             assigned_person: 'woodi',
             status: 'Done',
@@ -53,7 +53,7 @@ export const ProjectsData: ProjectsDataType =
         },
         {
             task_id: 'fgfddsfet',
-            task_discription: 'Impliment navigation flow',
+            task_description: 'Impliment navigation flow',
             task_checked: false,
             assigned_person: 'Antonio',
             status: 'In Review',
@@ -62,7 +62,7 @@ export const ProjectsData: ProjectsDataType =
         },
         {
             task_id: 'fgfserttb',
-            task_discription: 'Design UI components',
+            task_description: 'Design UI components',
             task_checked: true,
             assigned_person: 'Ioann',
             status: 'Todo',
@@ -80,7 +80,7 @@ export const ProjectsData: ProjectsDataType =
     project_tasks_list: [
         {
             task_id: 'fDCDSCCxc',
-            task_discription: 'Create app wireframes',
+            task_description: 'Create app wireframes',
             task_checked: false,
             assigned_person: 'Lola',
             status: 'Done',
@@ -89,7 +89,7 @@ export const ProjectsData: ProjectsDataType =
         },
         {
             task_id: 'fgfddvdvsgrt',
-            task_discription: 'Wright content for main pages',
+            task_description: 'Wright content for main pages',
             task_checked: true,
             assigned_person: 'Antonio',
             status: 'In Progress',
@@ -98,7 +98,7 @@ export const ProjectsData: ProjectsDataType =
         },
         {
             task_id: 'fgvvvvvrgr',
-            task_discription: 'Impliment user authentication',
+            task_description: 'Impliment user authentication',
             task_checked: true,
             assigned_person: 'Ioann',
             status: 'Backlog',
