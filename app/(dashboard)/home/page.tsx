@@ -8,7 +8,7 @@ import { LuSettings } from "react-icons/lu"
 import styles from './home.module.scss'
 
 const HomePage = async() => {
-
+// TODO: in this place fetch full Data list
     let tasks = 14
     let projects = 2
     const response = await fetch('https://jsonplaceholder.typicode.com/users')

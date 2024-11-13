@@ -18,6 +18,7 @@ import type { ProjectsDataType } from '../../../../types/tasks.types'
 
 
 export default function TablePage() {
+    // TODO: in this place fetch full Data list
     let D = true
     return (
         <main className={styles.table_page}>
