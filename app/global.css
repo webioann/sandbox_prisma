@@ -68,6 +68,7 @@ a{
 p, h1, h2, h3, h4, h5 {
     font-weight: normal;
 }
+
 html, body{
     background-color: var(--bg-main);
     color: var(--main-text);
@@ -81,6 +82,23 @@ html, body{
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
+/* html, body:has(option[value='dark']):checked{
+    --bg-main: #000000;
+    --bg-second: #f4f4f4;
+    --bg-dark: #d6d6d6;
+    --bg-contrast: #2962e7;
+    --text-main: #ffffff;
+    --text-second: #8e8e8e;
+}
+html, body:has(option[value='light']):checked{
+    --bg-main: #ffffff;
+    --bg-second: #f4f4f4;
+    --bg-dark: #d6d6d6;
+    --bg-contrast: #2962e7;
+    --text-main: #060606;
+    --text-second: #8e8e8e;
+} */
+
 /* @media (min-width: 580px) {
     html,
     body {
