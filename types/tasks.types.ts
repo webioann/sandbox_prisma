@@ -6,6 +6,18 @@ export type StatusesType =
     |'In Review'
     |'In Progress'
     |'Done'
+// one single task object type
+export interface ITaskType {
+    task_id: string
+    task_name: string
+    task_description: string
+    task_checked: boolean
+    assignee: string
+    status: StatusesType
+    due_date: number
+    task_created_at: number
+}
+// task status highlighting ================================
 type statusesListType = {
     status: StatusesType
     statusHighlightColor: string
@@ -29,21 +41,3 @@ export type createAndHighlightDueDateType =
         dueDateInReadableFormat: string,
         criticalityColor: dueDateStatusColors
     }
-// one single task object type
-export interface ITaskType {
-    task_id: string
-    task_description: string
-    task_checked: boolean
-    assigned_person: string
-    status: StatusesType
-    due_date: number
-    task_created_at: number
-}
-export interface IProjectType {
-    project_id: string
-    project_name: string
-    project_tasks_list: Array<ITaskType>
-    project_due_date: number
-    project_created_at: number
-}
-export type ProjectsDataType = Array<IProjectType>

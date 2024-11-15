@@ -6,7 +6,8 @@ import BadgeWithSingleSymbol from '../../../../../components/BadgeWithSingleSymb
 import BadgeForStatusColored from '../BadgeForStatusColored/BadgeForStatusColored'
 import DueDateHighlighter from '../DueDateHighlighter/DueDateHighlighter'
 
-import type { IProjectType, ITaskType } from '../../../../../types/tasks.types'
+import type { ITaskType } from '../../../../../types/tasks.types'
+import type { IProjectType } from '../../../../../types/workspaces.types'
 
 type props = {
     project: IProjectType
@@ -29,8 +30,8 @@ const  TaskTableItem: React.FC<props> = ({project, task}) => {
             </div>
 
             <div className={styles.assigned_person}>
-                <BadgeWithSingleSymbol variant='circle' symbol={task.assigned_person}/>
-                <p className={styles.person_name}>{task.assigned_person}</p>
+                <BadgeWithSingleSymbol variant='circle' symbol={task.assignee}/>
+                <p className={styles.person_name}>{task.assignee}</p>
             </div>
             <DueDateHighlighter dueDate={task.due_date}/>
             <div className={styles.task_status}>

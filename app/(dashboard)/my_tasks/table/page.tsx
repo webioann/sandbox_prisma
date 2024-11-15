@@ -13,8 +13,8 @@ import styles from './table.module.scss'
 import { TbArrowsUpDown } from "react-icons/tb"
 import { IoIosArrowDown } from "react-icons/io"
 
-import { ProjectsData } from '../../../../MOCK_DATA'
-import type { ProjectsDataType } from '../../../../types/tasks.types'
+import { WorkspacesData } from '../../../../NEW_MOCK_DATA'
+import type { WorkspacesDataType } from '../../../../types/workspaces.types'
 
 
 export default function TablePage() {
@@ -74,9 +74,11 @@ export default function TablePage() {
                     </div>
                     {/*TABLE ROWS*/}
                     <ul className={styles.table_of_projects}>
-                        {ProjectsData.map((project) => 
-                            project.project_tasks_list.map((task) => { return (<TaskTableItem project={project} task={task}/>)})
-                        )}
+                        {WorkspacesData.map((workspace) => 
+                            workspace.projects_list.map((project) =>
+                                project.project_tasks_list.map((task) => 
+                                <TaskTableItem project={project} task={task}/>
+                        )))}
                     </ul>
                     
                     
