@@ -46,7 +46,11 @@ const Workspaces_Page = async() => {
                                 workspace.projects_list.map((project) => {
                                     let projectId = project.project_id
                                     return project.project_tasks_list.map((task) => 
-                                        <TaskLinkWidget key={task.task_id} task={task} projectId={projectId}/>
+                                        <TaskLinkWidget 
+                                            key={task.task_id} 
+                                            task={task} 
+                                            projectId={projectId}
+                                        />
                                     )
                                 }))
                             }
@@ -81,6 +85,7 @@ const Workspaces_Page = async() => {
                         {WorkspacesData.map((workspace) => 
                             workspace.projects_list.map((project) => {return (
                                 <LinkToProjectWorkspace 
+                                    workspace_id={workspace.workspace_id}
                                     project_id={project.project_id} 
                                     project_name={project.project_name} 
                                     ui='bordered'

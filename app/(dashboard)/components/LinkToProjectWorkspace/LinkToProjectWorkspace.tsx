@@ -5,12 +5,13 @@ import { BsChevronExpand } from "react-icons/bs"
 import styles from './link-to-project.module.scss'
 
 type linkToProjectProps = {
+    workspace_id: string
     project_id: string
     project_name: string
     ui: 'bordered' | 'dark_block' | 'smaller'
 }
 
-function LinkToProjectWorkspace({project_id, project_name, ui}: linkToProjectProps) {
+function LinkToProjectWorkspace({workspace_id, project_id, project_name, ui}: linkToProjectProps) {
     
     const truncate = (name: string) => {
         const maxLength = 17
@@ -20,7 +21,7 @@ function LinkToProjectWorkspace({project_id, project_name, ui}: linkToProjectPro
 
     return (
         <Link 
-            href={`/projects/${project_id}`}  
+            href={`/workspaces/${workspace_id}/projects/${project_id}`}  
             className={`${styles[ui]}`}>
             <div className={styles.link_inner}>
                 <BadgeWithSingleSymbol variant={ui === 'smaller' ? 'cube' : 'cube_big'} symbol={project_name}/>
