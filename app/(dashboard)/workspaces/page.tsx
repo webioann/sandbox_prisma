@@ -6,6 +6,7 @@ import PersonWidget from '../components/PersonWidget/PersonWidget'
 import LinkToProjectWorkspace  from '@/app/(dashboard)/components/LinkToProjectWorkspace/LinkToProjectWorkspace'
 import { FaPlus } from "react-icons/fa"
 import { LuSettings } from "react-icons/lu"
+import { projectsTotalCount, tasksTotalCount, taskCheckedCount } from '../libs/tasks_functions';
 import styles from './workspaces.module.scss'
 
 type countFunctionType = () => number
@@ -14,38 +15,17 @@ import Link from 'next/link';
 
 const Workspaces_Page = async() => {
 // TODO: in this place fetch full Data list
-    const countOfProjects: countFunctionType = () => {
-        return WorkspacesData.reduce((accum, item) =>{
-            return accum + item.projects_list.length
-        }, 0)
-    }
-    const countOfTasks: countFunctionType = () => {
-        return WorkspacesData.reduce((accum, item) =>{
-            return accum + item.projects_list.reduce((accum, item) => {return accum + item.project_tasks_list.length}, 0) 
-        }, 0)
-    }
-    const countCompletedTasks: countFunctionType = () => {
-        return WorkspacesData.reduce((accum, workspace) =>{
-            return accum + workspace.projects_list.reduce((accum, project) => 
-                {return accum + project.project_tasks_list.filter((item) => 
-                    item.task_checked === true).length
-                }, 0) 
-        }, 0)
-    }
-
-    // const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    // const users = await response.json();
-    // console.log(users);
 
     const ID = "_id_root"
+
     return (
         <div className={styles.workspaces_page}>
             {/* TOTAL RESULTS ROW */}
             <div className={styles.total_results}>
-                <TotalResult title='Total Projects' total={countOfProjects()}/>
-                <TotalResult title='Total Tasks' total={countOfTasks()}/>
+                <TotalResult title='Total Projects' total={projectsTotalCount(WorkspacesData)}/>
+                <TotalResult title='Total Tasks' total={tasksTotalCount(WorkspacesData)}/>
                 <TotalResult title='Assigned Tasks' total={7}/>
-                <TotalResult title='Completed Task' total={countCompletedTasks()}/>
+                <TotalResult title='Completed Task' total={taskCheckedCount(WorkspacesData)}/>
                 <TotalResult title='Overdue Tasks' total={0}/>
                 <Link href={`/workspaces/${ID}`}>GOOOOOOOOOOOO</Link>
             </div>
@@ -56,7 +36,7 @@ const Workspaces_Page = async() => {
                     {/* assigned tasks block */}
                     <section className={styles.assigned_section}>
                         <div className={styles.assigned_header}>
-                            <h4 className={styles.title}>Assigned Tasks ({countOfTasks()})</h4>
+                            <h4 className={styles.title}>Assigned Tasks ({tasksTotalCount(WorkspacesData)})</h4>
                             <div className={styles.plus_button}>
                                 <FaPlus size={12} color='grey'/>
                             </div>
@@ -92,7 +72,7 @@ const Workspaces_Page = async() => {
                 {/* project section */}
                 <section className={styles.projects_viewer}>
                     <div className={styles.projects_header}>
-                        <h4 className={styles.title}>Projects ({countOfProjects()})</h4>
+                        <h4 className={styles.title}>Projects ({projectsTotalCount(WorkspacesData)})</h4>
                         <div className={styles.plus_button}>
                             <FaPlus size={12} color='grey'/>
                         </div>
@@ -100,7 +80,12 @@ const Workspaces_Page = async() => {
                     <ul className={styles.projects_list}>
                         {WorkspacesData.map((workspace) => 
                             workspace.projects_list.map((project) => {return (
-                                <LinkToProjectWorkspace project_id={project.project_id} project_name={project.project_name} ui='bordered'/>
+                                <LinkToProjectWorkspace 
+                                    project_id={project.project_id} 
+                                    project_name={project.project_name} 
+                                    ui='bordered'
+                                    key={project.project_id}
+                                />
                         )}))}
                     </ul>
                 </section>
