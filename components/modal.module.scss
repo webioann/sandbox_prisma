@@ -1,0 +1,23 @@
+.modal_dialog{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+    .modal_window{
+        width: 500px;
+        // height: 300px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        padding: 12px;
+        .cancel_button{
+            padding: 12px;
+            background-color: blue;
+        }
+    }
+}

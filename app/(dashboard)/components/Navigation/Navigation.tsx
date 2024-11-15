@@ -21,7 +21,7 @@ function Navigation() {
 
     return (
         <nav>
-            <Link href={"/home"} className={path === '/home' ? 'nav-link active' : 'nav-link'}>
+            <Link href={"/workspaces"} className={path === '/home' ? 'nav-link active' : 'nav-link'}>
                 <GoHomeFill/>
                 <h4 className='link-name'>Home</h4>
             </Link>

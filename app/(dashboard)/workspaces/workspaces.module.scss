@@ -1,7 +1,6 @@
-.home_page{
+.workspaces_page{
     width: 100%;
     padding: 16px;
-    border: 1px solid red; 
     .total_results{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -9,27 +8,9 @@
         border: 1px solid var(--bg-second);
         border-radius: 5px;
     }
-    // // ====== media queries ======
-    // @media (min-width: 580px) {
-    //     .total_results{
-    //         grid-template-columns: repeat(2, 1fr);
-    //     }
-    // }
-    // @media (min-width: 768px) {
-    //     .total_results{
-    //         grid-template-columns: repeat(3, 1fr);
-    //     }
-    // }
-    // @media (min-width: 1024px) {
-    //     .total_results{
-    //         grid-template-columns: repeat(5, 1fr);
-    //     }
-    // }
-    // 
-    .dashboard_wrapper{
+    .workspaces{
         display: grid;
         grid-template-columns: 1fr;
-        // min-height: 100%;
         gap: 16px;
         margin-top: 16px;
         // assigned tasks section -------------------
@@ -152,7 +133,7 @@
 
 
     @media (min-width: 768px) {
-        .dashboard_wrapper{
+        .workspaces{
             grid-template-columns: 1fr 1fr;
         }
     }

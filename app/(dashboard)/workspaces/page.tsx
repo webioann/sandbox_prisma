@@ -5,17 +5,42 @@ import PersonWidget from '../components/PersonWidget/PersonWidget'
 import LinkToProjectWorkspace  from '@/app/(dashboard)/components/LinkToProjectWorkspace/LinkToProjectWorkspace'
 import { FaPlus } from "react-icons/fa"
 import { LuSettings } from "react-icons/lu"
-import styles from './home.module.scss'
+import styles from './workspaces.module.scss'
 
-const HomePage = async() => {
+import Link from 'next/link';
+
+// type user = {
+//     id: number
+//     name: string
+//     username: string
+//     email: string
+//     address: {
+//         street: string
+//         suite: string
+//         city: string
+//         zipcode: string
+//         geo: [Object]
+//     },
+//     phone: string
+//     website: string
+//     company: {
+//         name: string
+//         catchPhrase: string
+//         bs: string
+//     }
+// }
+
+const Workspaces_Page = async() => {
 // TODO: in this place fetch full Data list
     let tasks = 14
     let projects = 2
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    const users = await response.json();
+    // const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    // const users = await response.json();
     // console.log(users);
+
+    const ID = "_id_root"
     return (
-        <div className={styles.home_page}>
+        <div className={styles.workspaces_page}>
             {/* TOTAL RESULTS ROW */}
             <div className={styles.total_results}>
                 <TotalResult title='Total Projects' total={10}/>
@@ -23,10 +48,11 @@ const HomePage = async() => {
                 <TotalResult title='Assigned Tasks' total={7}/>
                 <TotalResult title='Completed Task' total={2}/>
                 <TotalResult title='Overdue Tasks' total={0}/>
+                <Link href={`/workspace/${ID}`}>GOOOOOOOOOOOO</Link>
             </div>
 
-            {/* DASHBOARD */}
-            <div className={styles.dashboard_wrapper}>
+            {/* workspaces */}
+            <div className={styles.workspaces}>
                 <div className={styles.tasks_viewer}>
                     {/* assigned tasks block */}
                     <section className={styles.assigned_section}>
@@ -77,4 +103,4 @@ const HomePage = async() => {
     )
 }
 
-export default HomePage;
+export default Workspaces_Page;
