@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiFillPlusCircle } from "react-icons/ai"
-import LinkToProjectWorkspace from '../LinkToProjectWorkspace/LinkToProjectWorkspace';
+import LinkToProjectWorkspace from '../LinkToProjectPage/LinkToProjectPage';
 import styles from './projects-list.module.scss'
 
 function ProjectsList() {

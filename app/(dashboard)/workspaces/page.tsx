@@ -3,7 +3,7 @@ import { WorkspacesData } from '../../../NEW_MOCK_DATA'
 import TotalResult from '@/app/(dashboard)/components/TotalResult/TotalResult'
 import TaskLinkWidget from '../components/TaskDetailsViewLink/TaskLinkWidget';
 import PersonWidget from '../components/PersonWidget/PersonWidget'
-import LinkToProjectWorkspace  from '@/app/(dashboard)/components/LinkToProjectWorkspace/LinkToProjectWorkspace'
+import LinkToProjectPage  from '@/app/(dashboard)/components/LinkToProjectPage/LinkToProjectPage'
 import { FaPlus } from "react-icons/fa"
 import { LuSettings } from "react-icons/lu"
 import { projectsTotalCount, tasksTotalCount, taskCheckedCount } from '../../libs/tasks_functions';
@@ -84,7 +84,7 @@ const Workspaces_Page = async() => {
                     <ul className={styles.projects_list}>
                         {WorkspacesData.map((workspace) => 
                             workspace.projects_list.map((project) => {return (
-                                <LinkToProjectWorkspace 
+                                <LinkToProjectPage 
                                     workspace_id={workspace.workspace_id}
                                     project_id={project.project_id} 
                                     project_name={project.project_name} 

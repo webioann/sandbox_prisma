@@ -7,7 +7,7 @@ import ContainerFluid from "@/components/Containers/ContainerFluid"
 import ContainerMain from "@/components/Containers/ContainerMain"
 import TopHeader from "@/app/(dashboard)/components/TopHeader/TopHeader"
 import ProjectsList from "@/app/(dashboard)/components/ProjectsList/ProjectsList"
-import { ProjectsDataType } from '../../types/tasks.types'
+// import { ProjectsDataType } from '../../types/tasks.types'
 
 export const metadata: Metadata = {
   title: "dashboard",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 export default async function Dashboard_Layout(
   { children, modal}: { children: React.ReactNode, modal: React.ReactNode}) {
   //TODO:IN THIS PLACE ONLY PART OF DATA
-  const response = await fetch('https://jsonplaceholder.typicode.com/users')
-  const users = await response.json();
+  // const response = await fetch('https://jsonplaceholder.typicode.com/users')
+  // const users = await response.json();
   // console.log(users);
 
     return (

@@ -127,53 +127,53 @@ export const WorkspacesData: WorkspacesDataType =
         ],
     
     },
-{
-    workspace_id: 'workspace_2',
-    projects_list: 
-    [
-        {
-            project_id: 'project_4nh',
-            project_name: 'Weather Algorithmic App',
-            project_tasks_list: [
-                {
-                    task_id: 'fgfdddasg',
-                    task_name: 'This task name',
-                    task_description: 'Conduct usability testing',
-                    task_checked: false,
-                    assignee: 'John',
-                    status: 'In Progress',
-                    due_date: 1731880800000,
-                    task_created_at: 1731189600000
-                },
-                {
-                    task_id: 'fgfddsfet',
-                    task_name: 'This task name',
-                    task_description: 'Impliment offline mode',
-                    task_checked: false,
-                    assignee: 'Antonio',
-                    status: 'In Review',
-                    due_date: 1731276000000,
-                    task_created_at: 1731189600000
-                },
-                {
-                    task_id: 'fgfserttb',
-                    task_name: 'This task name',
-                    task_description: 'Integrate push notification',
-                    task_checked: true,
-                    assignee: 'Dave',
-                    status: 'Backlog',
-                    due_date: 1731535200000,
-                    task_created_at: 1731189600000
-                },
+    {
+        workspace_id: 'workspace_2',
+        projects_list: 
+        [
+            {
+                project_id: 'project_4nh',
+                project_name: 'Weather Algorithmic App',
+                project_tasks_list: [
+                    {
+                        task_id: 'fgfdddasg',
+                        task_name: 'This task name',
+                        task_description: 'Conduct usability testing',
+                        task_checked: false,
+                        assignee: 'John',
+                        status: 'In Progress',
+                        due_date: 1731880800000,
+                        task_created_at: 1731189600000
+                    },
+                    {
+                        task_id: 'fgfddsfet',
+                        task_name: 'This task name',
+                        task_description: 'Impliment offline mode',
+                        task_checked: false,
+                        assignee: 'Antonio',
+                        status: 'In Review',
+                        due_date: 1731276000000,
+                        task_created_at: 1731189600000
+                    },
+                    {
+                        task_id: 'fgfserttb',
+                        task_name: 'This task name',
+                        task_description: 'Integrate push notification',
+                        task_checked: true,
+                        assignee: 'Dave',
+                        status: 'Backlog',
+                        due_date: 1731535200000,
+                        task_created_at: 1731189600000
+                    },
 
-            ],
-            project_due_date: 1731880800000,
-            project_created_at: 1731189600000
-        },
-    
-    ],
+                ],
+                project_due_date: 1731880800000,
+                project_created_at: 1731189600000
+            },
+        
+        ],
 
-}
+    }
 
 ]
 

@@ -11,7 +11,7 @@ type linkToProjectProps = {
     ui: 'bordered' | 'dark_block' | 'smaller'
 }
 
-function LinkToProjectWorkspace({workspace_id, project_id, project_name, ui}: linkToProjectProps) {
+function LinkToProjectPage({workspace_id, project_id, project_name, ui}: linkToProjectProps) {
     
     const truncate = (name: string) => {
         const maxLength = 17
@@ -32,4 +32,4 @@ function LinkToProjectWorkspace({workspace_id, project_id, project_name, ui}: li
     )
 }
 
-export default LinkToProjectWorkspace;
+export default LinkToProjectPage;
