@@ -10,7 +10,7 @@ async function SingleProjectPage({params}: {params: Promise<{projectId: string}>
 
     return (
         <div className={styles.single_project_page}>
-            PAGE for progect {projectData?.project_name}
+            PAGE for project {projectData?.project_name}
             <h2>{'hhh'}</h2>
         </div>
     )

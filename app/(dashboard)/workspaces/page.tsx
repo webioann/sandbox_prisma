@@ -6,7 +6,7 @@ import PersonWidget from '../components/PersonWidget/PersonWidget'
 import LinkToProjectWorkspace  from '@/app/(dashboard)/components/LinkToProjectWorkspace/LinkToProjectWorkspace'
 import { FaPlus } from "react-icons/fa"
 import { LuSettings } from "react-icons/lu"
-import { projectsTotalCount, tasksTotalCount, taskCheckedCount } from '../libs/tasks_functions';
+import { projectsTotalCount, tasksTotalCount, taskCheckedCount } from '../../libs/tasks_functions';
 import styles from './workspaces.module.scss'
 
 type countFunctionType = () => number
