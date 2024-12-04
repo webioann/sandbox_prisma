@@ -21,7 +21,7 @@ function LinkToProjectPage({workspace_id, project_id, project_name, ui}: linkToP
 
     return (
         <Link 
-            href={`/workspaces/${workspace_id}/projects/${project_id}`}  
+            href={`/workspace/${workspace_id}/projects/${project_id}`}  
             className={`${styles[ui]}`}>
             <div className={styles.link_inner}>
                 <BadgeWithSingleSymbol variant={ui === 'smaller' ? 'cube' : 'cube_big'} symbol={project_name}/>

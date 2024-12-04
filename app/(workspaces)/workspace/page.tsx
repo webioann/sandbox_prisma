@@ -1,19 +1,16 @@
 "use server";
 import { WorkspacesData } from '../../../NEW_MOCK_DATA'
-import TotalResult from '@/app/(dashboard)/components/TotalResult/TotalResult'
+import Link from 'next/link';
+import TotalResult from '@/app/(workspaces)/components/TotalResult/TotalResult'
 import TaskLinkWidget from '../components/TaskDetailsViewLink/TaskLinkWidget';
 import PersonWidget from '../components/PersonWidget/PersonWidget'
-import LinkToProjectPage  from '@/app/(dashboard)/components/LinkToProjectPage/LinkToProjectPage'
+import LinkToProjectPage  from '@/app/(workspaces)/components/LinkToProjectPage/LinkToProjectPage'
 import { FaPlus } from "react-icons/fa"
 import { LuSettings } from "react-icons/lu"
 import { projectsTotalCount, tasksTotalCount, taskCheckedCount } from '../../libs/tasks_functions';
-import styles from './workspaces.module.scss'
+import styles from './workspace.module.scss'
 
-type countFunctionType = () => number
-
-import Link from 'next/link';
-
-const Workspaces_Page = async() => {
+const Workspace_Page = async() => {
 // TODO: in this place fetch full Data list
 
     const ID = "_id_root"
@@ -27,7 +24,7 @@ const Workspaces_Page = async() => {
                 <TotalResult title='Assigned Tasks' total={7}/>
                 <TotalResult title='Completed Task' total={taskCheckedCount(WorkspacesData)}/>
                 <TotalResult title='Overdue Tasks' total={0}/>
-                <Link href={`/workspaces/${ID}`}>GOOOOOOOOOOOO</Link>
+                <Link href={`/workspace/${ID}`}>GOOOOOOOOOOOO</Link>
             </div>
 
             {/* workspaces */}
@@ -99,4 +96,4 @@ const Workspaces_Page = async() => {
     )
 }
 
-export default Workspaces_Page;
+export default Workspace_Page;

@@ -1,5 +1,5 @@
 import {useFindProjectDataByID}  from './hooks/useFindProjectDataByID';
-import styles from './single-project.module.scss'
+import styles from './project-page.module.scss'
 
 import { WorkspacesData } from '../../../../../../NEW_MOCK_DATA'
 

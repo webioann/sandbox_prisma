@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import SidebarWrapper from "@/app/(dashboard)/components/SidebarWrapper/Sidebar"
+import SidebarWrapper from "@/app/(workspaces)/components/SidebarWrapper/Sidebar"
 import WorkspacesList from './components/WorkspacesList/WorkspacesList'
-import AppLogo from "@/app/(dashboard)/components/AppLogo/AppLogo"
-import Navigation from "@/app/(dashboard)/components/Navigation/Navigation"
+import AppLogo from "@/app/(workspaces)/components/AppLogo/AppLogo"
+import Navigation from "@/app/(workspaces)/components/Navigation/Navigation"
 import ContainerFluid from "@/components/Containers/ContainerFluid"
 import ContainerMain from "@/components/Containers/ContainerMain"
-import TopHeader from "@/app/(dashboard)/components/TopHeader/TopHeader"
-import ProjectsList from "@/app/(dashboard)/components/ProjectsList/ProjectsList"
+import TopHeader from "@/app/(workspaces)/components/TopHeader/TopHeader"
+import ProjectsList from "@/app/(workspaces)/components/ProjectsList/ProjectsList"
 // import { ProjectsDataType } from '../../types/tasks.types'
 
 export const metadata: Metadata = {

@@ -14,7 +14,7 @@ function SignInPage() {
     
     return (
         <main className='login-page'>
-            { user ? <Link href={'/workspaces'}>WORKSPACES</Link> : <h1>NO REGISTER USER</h1>}
+            { user ? <Link href={'/workspace'}>WORKSPACES</Link> : <h1>NO REGISTER USER</h1>}
             <LoginForm/>
         </main>
     )
