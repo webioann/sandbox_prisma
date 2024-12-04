@@ -86,7 +86,7 @@ export const WorkspacesData: WorkspacesDataType =
             },
             {
                 project_id: 'project_3wz',
-                project_name: 'Fullstuck Movies App',
+                project_name: 'Full stuck Movies App',
                 project_tasks_list: [
                     {
                         task_id: 'fDCDSCCxc',
