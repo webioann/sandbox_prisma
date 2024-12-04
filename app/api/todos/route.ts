@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 export async function GET() {
     try{
         const data = await prisma.todo.findMany()
-        revalidatePath("/")        
+        revalidatePath("/todos")        
         return NextResponse.json({ data, status: 201 })
     }
     catch(error) {
